@@ -15,12 +15,12 @@ header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba
 .btn{display:inline-flex;padding:13px 20px;background:var(--orange);color:#fff;text-decoration:none;font:600 14px "Space Grotesk";border-radius:3px}.btn.dark{background:var(--ink)}
 .hero{padding:100px 0 90px;border-bottom:1px solid var(--line);background:radial-gradient(circle at 85% 15%,rgba(244,98,13,.13),transparent 30%),var(--paper)}.eyebrow{color:var(--orange);font:700 13px "Space Grotesk";letter-spacing:.12em}.hero h1{font-size:clamp(50px,7vw,88px);max-width:850px;margin:16px 0 25px}.hero h1 em{font-style:normal;color:var(--orange)}.hero .lead{font-size:20px;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .intro{padding:80px 0 35px}.kicker{color:var(--orange);font:700 13px "Space Grotesk";letter-spacing:.08em}.intro h2{font-size:clamp(34px,4vw,52px);max-width:720px;margin:10px 0 18px}.intro p{max-width:760px}
-.service{padding:80px 0;border-top:1px solid var(--line)}.service-grid{display:grid;grid-template-columns:120px 1fr;gap:35px}.num{font:700 18px "Space Grotesk";color:var(--orange)}.service h2{font-size:clamp(32px,4vw,48px);margin:0 0 8px}.service h3{font-size:20px;margin:0 0 14px}.service p{max-width:780px}.service ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 35px;padding:0;margin:28px 0;list-style:none;max-width:850px}.service li{border-top:1px solid var(--line);padding:12px 0;color:var(--slate)}.service li::before{content:"→";color:var(--orange);margin-right:9px}.goal{margin-top:22px;padding:18px 20px;background:var(--fog);border-left:3px solid var(--orange);max-width:850px}.goal strong{color:var(--ink)}
+.service{padding:80px 0;border-top:1px solid var(--line)}.num{font:700 18px "Space Grotesk";color:var(--orange)}.service h2{font-size:clamp(32px,4vw,48px);margin:0 0 8px}.service h3{font-size:20px;margin:0 0 14px}.service p{max-width:780px}.service ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 35px;padding:0;margin:28px 0;list-style:none;max-width:850px}.service li{border-top:1px solid var(--line);padding:12px 0;color:var(--slate)}.service li::before{content:"→";color:var(--orange);margin-right:9px}.goal{margin-top:22px;padding:18px 20px;background:var(--fog);border-left:3px solid var(--orange);max-width:850px}.goal strong{color:var(--ink)}
 .connected{padding:100px 0;background:var(--ink);color:#fff}.connected p{color:#c6c2ba;max-width:750px}.connected h2{font-size:clamp(38px,5vw,62px);max-width:850px}.connected .points{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#3b3936;margin:45px 0}.points div{background:var(--ink);padding:24px}.points b{display:block;color:#fff}.points span{color:#aaa}
 .process{padding:90px 0}.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);margin-top:40px}.step{background:var(--paper);padding:24px;min-height:210px}.step b{color:var(--orange);font:700 13px "Space Grotesk"}.step h3{margin:12px 0 8px}.step p{font-size:14px}
 .cta{padding:90px 0;background:var(--fog)}.cta h2{font-size:clamp(40px,5vw,64px);max-width:780px}.cta p{max-width:650px}.cta .btn{margin-top:20px}
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--slate)}
-@media(max-width:800px){.navlinks{display:none}.hero{padding:70px 0}.service-grid{grid-template-columns:1fr;gap:10px}.service ul{grid-template-columns:1fr}.points,.process-grid{grid-template-columns:1fr}.connected,.process,.cta{padding:70px 0}}
+@media(max-width:800px){.navlinks{display:none}.hero{padding:70px 0}.service ul{grid-template-columns:1fr}.points,.process-grid{grid-template-columns:1fr}.connected,.process,.cta{padding:70px 0}}
 
 /* Marketing page visual system */
 .hero{padding:82px 0 96px;background:radial-gradient(circle at 78% 18%,rgba(244,98,13,.13),transparent 34%),var(--paper)}
@@ -70,7 +70,6 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .journey-stage{margin-top:18px;padding:16px 18px;background:var(--ink);border-radius:10px;color:#fff}
 .journey-stage span{font:700 10px "Space Grotesk";color:var(--orange);letter-spacing:.08em}
 .journey-stage p{margin:6px 0 0;color:#d2cec7;font-size:13px}
-.service-grid{display:grid;grid-template-columns:72px minmax(0,1fr)!important;gap:34px;align-items:start;max-width:1000px}
 .service-grid>div:nth-child(2){min-width:0}
 .service-visual,.visual-photo,.metric-card,.mini-chart,.hero-media{display:none!important}
 .contact{background:linear-gradient(135deg,#F4620D 0%,#FF8A3D 100%);color:#fff;clip-path:polygon(0 4%,100% 0,100% 100%,0 100%)}
@@ -108,7 +107,7 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper
 .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
 @media(max-width:900px){
  .full-picture-grid{grid-template-columns:1fr;gap:34px}.journey-steps{grid-template-columns:1fr 1fr}.journey-arrow{display:none}
- .service-grid{grid-template-columns:42px 1fr!important}.service ul{grid-template-columns:1fr}
+ .service ul{grid-template-columns:1fr}
  .navlinks{position:fixed;inset:60px 0 0 0;background:var(--paper);flex-direction:column;padding:2rem var(--pad);gap:.3rem;font-size:1.05rem;transform:translateX(100%);transition:transform .3s;overflow-y:auto}
  .navlinks.open{transform:translateX(0)}.has-dropdown{border-bottom:1px solid var(--line);padding-bottom:.6rem;margin-bottom:.6rem}
  .nav-top{width:100%;justify-content:space-between;padding:.6rem 0;font-size:1.05rem}
@@ -118,7 +117,7 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper
  .contact-grid{grid-template-columns:1fr}
 }
 @media(max-width:560px){
- .full-picture{padding:64px 0}.journey-steps{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr!important}.journey-system{padding:16px}
+ .full-picture{padding:64px 0}.journey-steps{grid-template-columns:1fr}.journey-system{padding:16px}
  .row2{grid-template-columns:1fr}.nav{padding-block:12px}.brand img{height:28px}
  .navlinks{inset:64px 0 0}.impact-grid,.foot-grid{grid-template-columns:1fr}
 }
@@ -149,12 +148,11 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .problem-result strong{color:#fff}
 .problem-note{margin-top:30px;max-width:850px;color:var(--slate);font-size:.9rem}
 .service{padding:88px 0;border-top:1px solid var(--line)}
-.service-grid{display:grid;grid-template-columns:72px minmax(0,1fr)!important;gap:34px;align-items:start;max-width:1000px;margin:0 auto}
 .service-grid>div:nth-child(2){min-width:0}
 .service h2,.service h3{margin-top:0}
 .service ul{max-width:900px}
-@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:42px 1fr!important}.problem-result{min-height:0}}
-@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}.service-grid{grid-template-columns:1fr!important}}
+@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.problem-result{min-height:0}}
+@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}}
 
 .problem-section{padding:96px 0;background:var(--paper);border-top:1px solid var(--line)}
 .problem-section .section-head{max-width:760px;margin-bottom:42px}.problem-section .section-head h2{font-size:clamp(38px,5vw,64px);margin:8px 0 14px}
@@ -163,10 +161,23 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .problem-option:hover{transform:translateX(4px);border-color:var(--orange)}.problem-option.active{border-color:var(--orange);background:var(--paper);box-shadow:0 10px 28px rgba(17,17,17,.07)}
 .check-box{width:22px;height:22px;border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;flex:0 0 22px;color:transparent;font-size:12px}.problem-option.active .check-box{background:var(--orange);border-color:var(--orange);color:#fff}
 .problem-result{min-height:285px;padding:36px;background:var(--ink);color:#fff;border-radius:12px;position:relative;overflow:hidden}.problem-result-number{font:700 12px "Space Grotesk";color:var(--orange);letter-spacing:.08em}.problem-result h3{font-size:clamp(28px,3.2vw,44px);margin:12px 0 24px;color:#fff}.problem-result p{color:#d9d4cd;max-width:640px}.problem-result strong{color:#fff}.problem-note{margin:30px auto 0;max-width:1080px;color:var(--slate);font-size:.9rem}
-.service-grid{grid-template-columns:72px minmax(0,1fr)!important;max-width:1000px;margin:0 auto!important}
 .contact{background:linear-gradient(135deg,#F4620D 0%,#FF8A3D 100%);color:#fff}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.6rem;align-items:start}.contact h2{color:#fff}.contact p{color:rgba(255,255,255,.88)}.contact .eyebrow{color:#3A1400}.contact ul.hint{list-style:none;margin-top:1.2rem;display:grid;gap:.4rem}.contact ul.hint li{color:rgba(255,255,255,.85);font-size:.86rem}.row2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}input,textarea,select{background:var(--fog);border:1px solid var(--line);color:var(--ink);padding:.8rem 1rem;border-radius:6px;font-family:inherit;font-size:.9rem;width:100%}
-@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:42px 1fr!important}.contact-grid{grid-template-columns:1fr}}
-@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}.service-grid{grid-template-columns:1fr!important}.row2{grid-template-columns:1fr}}
+@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}.row2{grid-template-columns:1fr}}
+
+/* Marketing service alignment */
+.service-grid{max-width:1000px!important;margin:0 auto!important;display:grid!important;grid-template-columns:72px minmax(0,1fr)!important;gap:18px!important}
+.service-grid .svc-card{text-align:left!important}
+.service-grid .svc-card-head{justify-content:flex-start!important;text-align:left!important}
+.service-grid .svc-card-head h3{text-align:left!important}
+@media(max-width:900px){.service-grid{grid-template-columns:42px minmax(0,1fr)!important}}
+@media(max-width:560px){.service-grid{grid-template-columns:1fr!important}}
+
+.problem-option{opacity:.48;filter:grayscale(.35);background:var(--fog);color:var(--ink)}
+.problem-option.active{opacity:1;filter:none;background:var(--paper);border-color:var(--orange);color:var(--ink);box-shadow:0 10px 28px rgba(17,17,17,.08)}
+.problem-option.active .check-box{background:var(--orange);border-color:var(--orange);color:#fff}
+.problem-option:hover{opacity:.82;filter:none}
+.problem-option.active:hover{opacity:1}
 </style>
 </head>
 <body>
@@ -226,76 +237,7 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 
 
 <main>
-<section class="hero"><div class="wrap">
-<h1>Marketing That <em>Moves the Business Forward</em></h1>
-<p class="lead">At <strong>Markify X</strong>, we build marketing systems around how your business actually works. That can mean improving your visibility in Google and AI search, generating leads through paid and organic channels, building a stronger brand, growing an eCommerce store, or automating the repetitive work behind your marketing.</p>
-<p class="lead">We look at the whole picture — your audience, offer, website, content, channels, and conversion journey — then build the pieces that matter.</p>
-<div class="actions"><a class="btn" href="#contact">Book a Free Consultation</a><a class="btn dark" href="#services">Explore Marketing Services</a></div>
-<div class="hero-media aria-label="Marketing performance visual">
-  <div class="media-frame">
-    <img src="" alt="Marketing analytics dashboard on a laptop" loading="eager">
-    <div class="media-badge"><span class="live-dot"></span> Strategy + performance</div>
-    <div class="media-card"><b>Marketing system</b><span>Search · Content · Social · Email</span></div>
-  </div>
-</div>
-</div></section>
 
-<section class="problem-section" id="problem">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">WHAT'S THE PROBLEM?</p>
-      <h2>Not every business needs more marketing.</h2>
-      <p>Sometimes, you need to fix what is stopping your marketing from working. Tell us what you're struggling with.</p>
-    </div>
-    <div class="problem-layout">
-      <div class="problem-checklist">
-        <button class="problem-option active" type="button" data-problem="1"><span class="check-box">✓</span><span>Nobody finds us</span></button>
-        <button class="problem-option" type="button" data-problem="2"><span class="check-box">✓</span><span>People find us, but don't enquire</span></button>
-        <button class="problem-option" type="button" data-problem="3"><span class="check-box">✓</span><span>We get enquiries, but lose them</span></button>
-        <button class="problem-option" type="button" data-problem="4"><span class="check-box">✓</span><span>Customers don't return</span></button>
-        <button class="problem-option" type="button" data-problem="5"><span class="check-box">✓</span><span>Our marketing is all over the place</span></button>
-        <button class="problem-option" type="button" data-problem="6"><span class="check-box">✓</span><span>We're launching something new</span></button>
-      </div>
-      <div class="problem-result" id="problemResult">
-        <div class="problem-result-number">01</div>
-        <h3>Nobody finds us</h3>
-        <p><strong>Focus on:</strong> SEO · AI Search · Local SEO · Content</p>
-        <p><strong>Goal:</strong> Improve visibility and help the right customers discover your business.</p>
-      </div>
-    </div>
-    <p class="problem-note">No complicated marketing jargon. No one-size-fits-all package. Just a clearer view of what may be holding your business back and which areas could make the biggest difference.</p>
-  </div>
-</section>
-
-<section class="service"><div class="service-grid"><div class="num">01</div><div><h2>Digital Marketing</h2><h3>Turn attention into measurable business opportunities.</h3><p>Your customers are already searching, comparing, scrolling, and researching online. The challenge is reaching them at the right moment and giving them a clear reason to choose you.</p><p>We create and manage digital marketing campaigns around your actual business goals — whether that means more qualified leads, enquiries, bookings, sales, or brand visibility.</p><ul><li>Digital marketing strategy</li><li>Campaign planning and management</li><li>Lead generation campaigns</li><li>Conversion-focused landing pages</li><li>Paid search and paid social campaigns</li><li>Audience research</li><li>Content strategy</li><li>Conversion rate optimisation</li><li>Marketing analytics and reporting</li><li>Campaign performance improvement</li></ul><div class="goal"><strong>The goal:</strong> Less random marketing activity. More measurable opportunities.</div></div></section>
-
-<section class="service"><div class="service-grid"><div class="num">02</div><div><h2>SEO &amp; AI Search</h2><h3>Get discovered where your customers are looking.</h3><p>Search is changing. People still use Google, but they are also asking ChatGPT, Google AI Overviews, Gemini, Perplexity, and other AI-powered systems for recommendations and answers.</p><p>We combine technical SEO, content, local search, authority building, and AI-search optimisation to improve how your business is found and understood.</p><ul><li>Technical SEO</li><li>On-page SEO</li><li>Local SEO</li><li>Keyword and search-intent research</li><li>Content strategy</li><li>Internal linking</li><li>Structured data</li><li>Google Business Profile optimisation</li><li>AI search optimisation</li><li>AEO / answer engine optimisation</li><li>GEO / generative engine optimisation</li><li>SEO audits</li><li>Search performance reporting</li></ul><div class="goal"><strong>The goal:</strong> Build sustainable search visibility that can bring the right people to your business.</div></div></section>
-
-<section class="service"><div class="service-grid"><div class="num">03</div><div><h2>eCommerce Marketing</h2><h3>More than traffic. More customers and more revenue.</h3><p>Getting people to an online store is only part of the job. We work across your store and marketing channels to create a better path from discovery to purchase.</p><ul><li>eCommerce SEO</li><li>Shopify marketing</li><li>WooCommerce marketing</li><li>Product page optimisation</li><li>Category page optimisation</li><li>Product-feed strategy</li><li>Conversion optimisation</li><li>Content and merchandising</li><li>Email campaigns</li><li>Retention marketing</li><li>Social media campaigns</li><li>Performance marketing</li><li>Analytics and revenue tracking</li></ul><div class="goal"><strong>The goal:</strong> Turn your online store into a stronger acquisition and revenue channel.</div></div></section>
-
-<section class="service"><div class="service-grid"><div class="num">04</div><div><h2>Social Media</h2><h3>Give your brand something worth following.</h3><p>Social media should not become a weekly exercise in posting whatever happens to be on the content calendar. Your content should have a purpose.</p><ul><li>Social media strategy</li><li>Content planning</li><li>Social media management</li><li>Post and carousel design</li><li>Short-form content</li><li>Community engagement</li><li>Content calendars</li><li>Platform-specific campaigns</li><li>Social advertising</li><li>Performance reporting</li></ul><div class="goal"><strong>The goal:</strong> Build recognition, engagement, and a stronger relationship with your audience.</div></div></section>
-
-<section class="service"><div class="service-grid"><div class="num">05</div><div><h2>Branding &amp; Design</h2><h3>Make your business look like the business you want to become.</h3><p>Your logo matters, but branding goes much further than a logo. We help businesses create brands that are clear, credible, and consistent across digital touchpoints.</p><ul><li>Brand identity</li><li>Logo design</li><li>Brand guidelines</li><li>Visual systems</li><li>Marketing materials</li><li>Social media design</li><li>Website visual direction</li><li>Presentation design</li><li>Ad creatives</li><li>Campaign graphics</li><li>UI / visual design</li></ul><div class="goal"><strong>The goal:</strong> Make your business easier to recognise, understand, and remember.</div></div></section>
-
-<section class="service"><div class="service-grid"><div class="num">06</div><div><h2>Video Editing</h2><h3>Turn raw footage into content people want to watch.</h3><p>We edit videos for businesses that need content for websites, social platforms, advertising, campaigns, presentations, and other digital channels.</p><ul><li>Short-form video editing</li><li>Reels and Shorts</li><li>Social media videos</li><li>Promotional videos</li><li>Video ads</li><li>YouTube editing</li><li>Motion graphics</li><li>Captions and subtitles</li><li>Product videos</li><li>Business presentations</li><li>Repurposing long-form content</li></ul><div class="goal"><strong>The goal:</strong> Create video content that communicates quickly and gives your audience a reason to keep watching.</div></div></section>
-
-<section class="service"><div class="service-grid"><div class="num">07</div><div><h2>Email Marketing</h2><h3>Stay connected after the first click.</h3><p>Email gives businesses a direct way to educate prospects, follow up, promote products, bring previous customers back, and build long-term relationships.</p><ul><li>Email marketing strategy</li><li>Newsletter campaigns</li><li>Lead-nurturing sequences</li><li>Welcome emails</li><li>Promotional campaigns</li><li>Customer retention campaigns</li><li>Abandoned-cart emails</li><li>Segmentation</li><li>Email copywriting</li><li>Campaign design</li><li>Performance tracking</li></ul><div class="goal"><strong>The goal:</strong> Turn your existing audience and customer base into a stronger long-term marketing asset.</div></div></section>
-
-<section class="service"><div class="service-grid"><div class="num">08</div><div><h2>Marketing Automation</h2><h3>Let your marketing system handle the repetitive work.</h3><p>We help businesses connect their marketing processes so routine work happens automatically while your team focuses on higher-value work.</p><ul><li>Lead capture automation</li><li>Email automation</li><li>Lead nurturing</li><li>CRM workflows</li><li>Customer follow-ups</li><li>Form-to-email workflows</li><li>Marketing integrations</li><li>Reporting automation</li><li>Customer segmentation</li><li>Campaign triggers</li><li>Workflow optimisation</li></ul><div class="goal"><strong>The goal:</strong> A marketing operation that keeps working even when your team is focused elsewhere.</div></div></section>
-</div>
-
-
-<section class="impact">
-  <div class="wrap">
-    <div class="impact-head"><div><span class="kicker">MEASURE WHAT MATTERS</span><h2>Marketing decisions should have something behind them.</h2></div><p>Use the right signals for the business: visibility, qualified demand, conversion and retention. The figures shown here are illustrative interface examples, not client results.</p></div>
-    <div class="impact-grid">
-      <div><span>01</span><b>Visibility</b><strong>+28%</strong><small>Illustrative trend</small></div>
-      <div><span>02</span><b>Engagement</b><strong>+41%</strong><small>Illustrative trend</small></div>
-      <div><span>03</span><b>Conversion</b><strong>+19%</strong><small>Illustrative trend</small></div>
-      <div><span>04</span><b>Retention</b><strong>+24%</strong><small>Illustrative trend</small></div>
-    </div>
-  </div>
-</section>
 
 <section class="connected"><div class="wrap"><span class="kicker">ONE BUSINESS. ONE SYSTEM.</span><h2>One Business. One Connected Marketing System.</h2><p>You do not necessarily need all eight services. Sometimes the problem is SEO. Sometimes it is conversion. Sometimes the brand is unclear. Sometimes you are generating leads but losing them during follow-up.</p><div class="points"><div><b>SEO</b><span>Can bring the visitor.</span></div><div><b>Content</b><span>Can build trust.</span></div><div><b>Design</b><span>Can strengthen the brand.</span></div><div><b>Social</b><span>Can create awareness.</span></div><div><b>Email</b><span>Can bring people back.</span></div><div><b>Automation</b><span>Can keep the process moving.</span></div></div><p>We connect the pieces that make sense for your business.</p></div></section>
 
@@ -303,65 +245,140 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 <div class="step"><b>01</b><h3>Understand</h3><p>We start with your business, audience, current marketing, competitors, and objectives.</p></div><div class="step"><b>02</b><h3>Find the Gaps</h3><p>We identify what is working, what is being missed, and where your marketing is losing potential customers.</p></div><div class="step"><b>03</b><h3>Build the Strategy</h3><p>We create a practical plan based on your priorities, resources, market, and growth targets.</p></div><div class="step"><b>04</b><h3>Execute</h3><p>Our team handles the strategy, creative, campaigns, optimisation, and technical work required to put the plan into action.</p></div><div class="step"><b>05</b><h3>Measure & Improve</h3><p>We track meaningful performance data, learn from the results, and continuously improve the system.</p></div>
 </div></div></section>
 
-<section id="contact" class="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <p class="eyebrow">NEXT STEP</p>
-        <h2>Tell us what you're trying to solve.</h2>
-        <p style="margin-top:.8rem">You don't need to choose a service, understand the technology, or prepare a perfect brief.</p>
-        <ul class="hint">
-          <li>✓ No package required — start with the problem.</li>
-          <li>✓ We identify the gaps and recommend the right mix.</li>
-          <li>✓ You only invest in what makes sense for your situation.</li>
-        </ul>
-      </div>
-      <form id="quoteForm" novalidate>
-        <div class="row2">
-          <div><label class="fl">Name</label><input type="text" name="name" placeholder="Your name" required></div>
-          <div><label class="fl">Email</label><input type="email" name="email" placeholder="you@company.com" required></div>
-        </div>
-        <div><label class="fl">Website</label><input type="url" name="website" placeholder="https://"></div>
-        <div><label class="fl">What's your biggest challenge right now?</label><textarea name="challenge" rows="3" placeholder="What's stopping you from reaching your goal?"></textarea></div>
-        <button class="btn alt" type="submit">Book My Consultation →</button>
-        <p class="form-msg" id="formMsg" role="status">Not sure where to start? Just tell us the problem.</p>
-      </form>
-    </div>
-  </section>
+
 </main>
-<section id="blog" style="background:var(--fog)">
-    <div class="wrap">
-      <div class="section-head reveal" style="margin-bottom:0">
-        <p class="eyebrow">RESOURCES</p>
-        <h2>From the blog.</h2>
-        <p>We're building out a library of guides on SEO, AI search, automation and growth. New articles are landing soon — check back, or ask us directly in a consultation.</p>
-        <a class="btn ghost" style="border-color:var(--line);margin-top:1.1rem" href="#contact">Ask us a question instead →</a>
-      </div>
-    </div>
-  </section>
-<section id="contact" class="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <p class="eyebrow">NEXT STEP</p>
-        <h2>Tell us what you're trying to solve.</h2>
-        <p style="margin-top:.8rem">You don't need to choose a service, understand the technology, or prepare a perfect brief.</p>
-        <ul class="hint">
-          <li>✓ No package required — start with the problem.</li>
-          <li>✓ We identify the gaps and recommend the right mix.</li>
-          <li>✓ You only invest in what makes sense for your situation.</li>
-        </ul>
-      </div>
-      <form id="quoteForm" novalidate>
-        <div class="row2">
-          <div><label class="fl">Name</label><input type="text" name="name" placeholder="Your name" required></div>
-          <div><label class="fl">Email</label><input type="email" name="email" placeholder="you@company.com" required></div>
-        </div>
-        <div><label class="fl">Website</label><input type="url" name="website" placeholder="https://"></div>
-        <div><label class="fl">What's your biggest challenge right now?</label><textarea name="challenge" rows="3" placeholder="What's stopping you from reaching your goal?"></textarea></div>
-        <button class="btn alt" type="submit">Book My Consultation →</button>
-        <p class="form-msg" id="formMsg" role="status">Not sure where to start? Just tell us the problem.</p>
-      </form>
-    </div>
-  </section><footer>
+
+
+
+<script>
+(function(){
+  const root=document.documentElement;
+  const navLogo=document.getElementById('navLogo');
+  const themeToggle=document.getElementById('themeToggle');
+
+  function syncLogo(){
+    if(!navLogo) return;
+    const dark=root.getAttribute('data-theme')==='dark';
+    const src=dark ? navLogo.dataset.dark : navLogo.dataset.light;
+    if(src) navLogo.src=src;
+  }
+
+  // Theme: same behavior as homepage, safely initialized on every page.
+  try{
+    if(localStorage.getItem('markify-theme')==='dark') root.setAttribute('data-theme','dark');
+    else root.setAttribute('data-theme','light');
+  }catch(e){}
+  syncLogo();
+
+  if(themeToggle){
+    themeToggle.addEventListener('click',function(){
+      const dark=root.getAttribute('data-theme')==='dark';
+      root.setAttribute('data-theme',dark?'light':'dark');
+      try{localStorage.setItem('markify-theme',dark?'light':'dark');}catch(e){}
+      syncLogo();
+    });
+  }
+
+  // Exact homepage cursor + magnetic button behavior.
+  if(window.matchMedia('(hover:hover)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.body.classList.add('has-cursor');
+    const dot=document.createElement('div');
+    dot.className='cursor-dot';
+    document.body.appendChild(dot);
+    window.addEventListener('pointermove',function(e){
+      dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px) translate(-50%,-50%)';
+    });
+    document.querySelectorAll('a,button,.card,summary').forEach(function(el){
+      el.addEventListener('pointerenter',function(){dot.classList.add('big')});
+      el.addEventListener('pointerleave',function(){dot.classList.remove('big')});
+    });
+    document.querySelectorAll('.btn').forEach(function(btn){
+      btn.addEventListener('pointermove',function(e){
+        const r=btn.getBoundingClientRect();
+        btn.style.transform='translate('+((e.clientX-r.left-r.width/2)*.3).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px)';
+      });
+      btn.addEventListener('pointerleave',function(){btn.style.transform=''});
+    });
+  }
+
+  // Mobile navigation.
+  const burger=document.getElementById('burger');
+  const nav=document.getElementById('navlinks');
+  if(burger && nav){
+    burger.addEventListener('click',function(){
+      const open=nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded',String(open));
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        nav.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        document.querySelectorAll('.has-dropdown.open').forEach(function(li){li.classList.remove('open')});
+      });
+    });
+  }
+
+  // Desktop/mobile dropdowns.
+  document.querySelectorAll('.nav-top').forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      e.stopPropagation();
+      const li=btn.closest('.has-dropdown');
+      if(!li) return;
+      const wasOpen=li.classList.contains('open');
+      document.querySelectorAll('.has-dropdown.open').forEach(function(x){x.classList.remove('open')});
+      if(!wasOpen) li.classList.add('open');
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.has-dropdown')){
+      document.querySelectorAll('.has-dropdown.open').forEach(function(x){x.classList.remove('open')});
+    }
+  });
+
+  // Problem checklist.
+  const problemData={
+    1:{title:'Nobody finds us',focus:'SEO · AI Search · Local SEO · Content',goal:'Improve visibility and help the right customers discover your business.'},
+    2:{title:"People find us, but don't enquire",focus:'Website · UX · Conversion Optimization · Branding',goal:'Turn existing attention and website visits into more enquiries.'},
+    3:{title:'We get enquiries, but lose them',focus:'CRM · Email Marketing · Automation · Lead Management',goal:'Respond faster, follow up consistently, and reduce lost opportunities.'},
+    4:{title:"Customers don't return",focus:'Email Marketing · Automation · Content · Customer Retention',goal:'Build stronger relationships and give existing customers reasons to come back.'},
+    5:{title:'Our marketing is all over the place',focus:'Strategy · Branding · Digital Marketing · Analytics · Automation',goal:'Connect your channels into one clear marketing system.'},
+    6:{title:"We're launching something new",focus:'Strategy · Branding · Website · Content · SEO · Launch Marketing',goal:'Build the right foundation, create awareness, and give your launch a clear path to market.'}
+  };
+  const result=document.getElementById('problemResult');
+  document.querySelectorAll('.problem-option').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.problem-option').forEach(function(x){x.classList.remove('active')});
+      btn.classList.add('active');
+      const d=problemData[btn.dataset.problem];
+      if(!d || !result) return;
+      const n=result.querySelector('.problem-result-number');
+      const h=result.querySelector('h3');
+      const ps=result.querySelectorAll('p');
+      if(n) n.textContent=String(btn.dataset.problem).padStart(2,'0');
+      if(h) h.textContent=d.title;
+      if(ps[0]) ps[0].innerHTML='<strong>Focus on:</strong> '+d.focus;
+      if(ps[1]) ps[1].innerHTML='<strong>Goal:</strong> '+d.goal;
+    });
+  });
+
+  // Consultation form, if present.
+  const form=document.getElementById('quoteForm');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      const msg=document.getElementById('formMsg');
+      const data=new FormData(form);
+      if(!data.get('name') || !data.get('email')){
+        if(msg) msg.textContent='Please add your name and email.';
+        return;
+      }
+      if(msg) msg.textContent="Thanks — we'll be in touch within one business day.";
+      form.reset();
+    });
+  }
+})();
+</script>
+<footer>
   <div class="wrap foot-grid">
     <div>
       <img src="data:image/png;base64,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" alt="Markify X">
@@ -375,199 +392,5 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
     <div class="socials" aria-label="Social media links"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Twitter">x</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Pinterest">p</a></div>
   </div>
 </footer>
-
-<script>
-const root=document.documentElement;
-const navLogo=document.getElementById('navLogo');
-function syncLogo(){ navLogo.src = root.getAttribute('data-theme')==='dark' ? navLogo.dataset.dark : navLogo.dataset.light; }
-try{ if(localStorage.getItem('markify-theme')==='dark') root.setAttribute('data-theme','dark'); }catch(e){}
-syncLogo();
-document.getElementById('themeToggle').addEventListener('click',()=>{
-  const isDark=root.getAttribute('data-theme')==='dark';
-  root.setAttribute('data-theme', isDark?'light':'dark');
-  try{localStorage.setItem('markify-theme', isDark?'light':'dark');}catch(e){}
-  syncLogo();
-});
-
-// technology logo strip
-const techs=[
-  ['Google','google'],
-  ['Google Analytics 4','googleanalytics'],
-  ['Google Search Console','googlesearchconsole'],
-  ['Google Ads','googleads'],
-  ['Meta','meta'],
-  ['TikTok','tiktok'],
-  ['Shopify','shopify'],
-  ['WordPress','wordpress'],
-  ['WooCommerce','woocommerce'],
-  ['Cloudflare','cloudflare'],
-  ['GoDaddy','godaddy'],
-  ['Hostinger','hostinger']
-];
-const track=document.getElementById('marqueeTrack');
-const chipHTML=techs.map(([name,slug])=>`<div class="logo-chip"><span class="lic"><img src="https://cdn.simpleicons.org/${slug}" alt="${name} logo" loading="lazy" decoding="async"></span><span>${name}</span></div>`).join('');
-track.innerHTML=chipHTML+chipHTML;
-
-if(window.matchMedia('(hover:hover)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
-  document.body.classList.add('has-cursor');
-  const dot=document.createElement('div'); dot.className='cursor-dot'; document.body.appendChild(dot);
-  window.addEventListener('pointermove',e=>{dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;});
-  document.querySelectorAll('a,button,.card,summary').forEach(el=>{
-    el.addEventListener('pointerenter',()=>dot.classList.add('big'));
-    el.addEventListener('pointerleave',()=>dot.classList.remove('big'));
-  });
-  document.querySelectorAll('.btn').forEach(btn=>{
-    btn.addEventListener('pointermove',e=>{
-      const r=btn.getBoundingClientRect();
-      btn.style.transform=`translate(${((e.clientX-r.left-r.width/2)*.3).toFixed(1)}px,${((e.clientY-r.top-r.height/2)*.3).toFixed(1)}px)`;
-    });
-    btn.addEventListener('pointerleave',()=>{btn.style.transform='';});
-  });
-}
-
-const tiltPanel=document.getElementById('tiltPanel');
-if(tiltPanel && window.matchMedia('(hover:hover)').matches){
-  const panel=tiltPanel.querySelector('.panel');
-  tiltPanel.addEventListener('pointermove',e=>{
-    const r=tiltPanel.getBoundingClientRect();
-    const px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
-    panel.style.transform=`rotateX(${(-py*10+4).toFixed(2)}deg) rotateY(${(px*14-6).toFixed(2)}deg)`;
-  });
-  tiltPanel.addEventListener('pointerleave',()=>{panel.style.transform='rotateX(4deg) rotateY(-6deg)';});
-}
-
-const burger=document.getElementById('burger'), nav=document.getElementById('navlinks');
-burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');burger.setAttribute('aria-expanded',open);});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded','false');document.querySelectorAll('.has-dropdown.open').forEach(li=>li.classList.remove('open'));}));
-
-// dropdown mega-menu
-document.querySelectorAll('.nav-top').forEach(btn=>{
-  btn.addEventListener('click',(e)=>{
-    e.stopPropagation();
-    const li=btn.closest('.has-dropdown');
-    const wasOpen=li.classList.contains('open');
-    document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));
-    if(!wasOpen) li.classList.add('open');
-  });
-});
-document.addEventListener('click',(e)=>{
-  if(!e.target.closest('.has-dropdown')) document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));
-});
-
-const sections=[...document.querySelectorAll('section[id]')];
-const navA=document.querySelectorAll('[data-nav]');
-sections.forEach(s=>new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){navA.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-45% 0px -50% 0px'}).observe(s));
-
-document.querySelectorAll('.reveal').forEach(el=>{
-  new IntersectionObserver((es,ob)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ob.unobserve(e.target);}})},{threshold:.15}).observe(el);
-});
-
-document.querySelectorAll('[data-count]').forEach(el=>{
-  const target=parseFloat(el.dataset.count), suf=el.dataset.suffix||'', dec=parseInt(el.dataset.decimal||'0');
-  new IntersectionObserver((es,ob)=>{es.forEach(e=>{
-    if(e.isIntersecting){
-      let cur=0; const step=target/40;
-      const t=setInterval(()=>{cur+=step; if(cur>=target){cur=target; clearInterval(t);} el.textContent=cur.toFixed(dec)+suf;},25);
-      ob.unobserve(e.target);
-    }
-  })},{threshold:.6}).observe(el);
-});
-
-// services: tabs + detail panel
-const SERVICES=[
-  {name:'Technology',ic:'<path d="M4 17V7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/>',tagline:'Build the systems behind your business.',items:[
-    ['Web Development','Business websites, corporate websites, landing pages, portals and custom web applications.'],
-    ['App Development','iOS, Android, cross-platform and business applications.'],
-    ['SaaS & Software Development','Custom SaaS platforms, business software, dashboards, CRM, ERP and internal tools.'],
-    ['API & System Integration','Connect your software, platforms, databases, payment systems and business tools.']]},
-  {name:'Growth & Search',ic:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',tagline:'Put your business in front of people actively searching for what you offer.',items:[
-    ['SEO · Local · Technical','Improve rankings and visibility across traditional search.'],
-    ['AEO & AI Search','Optimize your content for answer engines and AI-powered search experiences.'],
-    ['Content Strategy','Build content around the questions and search behavior of your customers.'],
-    ['Conversion Optimization','Turn more visitors into enquiries, customers and sales.']]},
-  {name:'Marketing',ic:'<rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M8 21h8M12 18v3"/>',tagline:'Turn attention into business.',items:[
-    ['Digital Marketing','Build an integrated acquisition strategy across the channels that matter.'],
-    ['Social Media Marketing','Strategy, content, management, campaigns and community growth.'],
-    ['Email Marketing','Campaigns, newsletters, automation, segmentation and customer journeys.'],
-    ['Paid Advertising','Campaign strategy, landing pages, tracking and performance optimization.'],
-    ['Lead Generation','Build systems that consistently attract and qualify potential customers.']]},
-  {name:'Creative',ic:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 000 18z" fill="currentColor" stroke="none"/>',tagline:'Make your business look as good as it performs.',items:[
-    ['Branding & Identity','Logos, brand systems, guidelines and visual identity.'],
-    ['Graphic Design','Social creatives, advertisements, presentations and marketing materials.'],
-    ['Video Production & Editing','Short-form content, ads, corporate videos, explainers and social videos.'],
-    ['UI/UX Design','Interfaces designed around usability, customer journeys and business goals.']]},
-  {name:'Commerce',ic:'<path d="M3 6l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="1.5"/>',tagline:'Build and grow your online store.',items:[
-    ['Shopify','Store development, customization and optimization.'],
-    ['WooCommerce','WordPress-based eCommerce development and management.'],
-    ['eCommerce Growth','SEO, conversion optimization, email marketing, automation and retention.']]},
-  {name:'Automation & Systems',ic:'<path d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.3-5 3 2.2 2.7 5 3 5 1.1 5 3-2.2 3-5 3-5-1.1-5-3"/>',tagline:'Spend less time managing repetitive work.',items:[
-    ['Business Automation','Automate repetitive processes and workflows.'],
-    ['CRM & ERP','Build or integrate systems that bring your business operations together.'],
-    ['Analytics & Reporting','Turn business and marketing data into useful decisions.'],
-    ['Digital Operations','Technology, processes and systems that make growing businesses easier to manage.']]}
-];
-const svcGrid=document.getElementById('svcGrid');
-const SVC_SLUGS=['svc-technology','svc-growth','svc-marketing','svc-creative','svc-commerce','svc-automation'];
-svcGrid.innerHTML=SERVICES.map((c,i)=>`
-  <div class="svc-card" id="${SVC_SLUGS[i]}" style="scroll-margin-top:90px">\n    ${i===2?'<a class="svc-page-link" href="marketing.html" aria-label="Open Marketing services page">':''}
-    <div class="svc-card-head"><span class="ic-badge"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">${c.ic}</svg></span><h3>${c.name}</h3></div>
-    <p class="tagline">${c.tagline}</p>
-    <ul>${c.items.map(([n,d])=>`<li><b>${n}</b><span>${d}</span></li>`).join('')}</ul>
-    ${i===2?'</a>':''}
-  </div>`).join('');
-
-// pillar hub diagram
-const PILLARS=[
-  ['Strategy',"Understand the business — where you are, what's stopping growth, and what's being missed."],
-  ['Technology','Build what is required: sites, apps, SaaS platforms and integrations.'],
-  ['Marketing','Reach the right audience across the channels that matter.'],
-  ['Creative','Communicate the value with branding, design and video.'],
-  ['Data','Measure what actually happens, not just what launched.'],
-  ['Automation','Improve how the business operates day to day.'],
-  ['Growth','Continuously improve the system as the business evolves.']
-];
-const ring=document.getElementById('pillarRing');
-const pTitle=document.getElementById('pillarTitle'), pDesc=document.getElementById('pillarDesc');
-if(ring && pTitle && pDesc) PILLARS.forEach(([name],i)=>{
-  const n=document.createElement('button');
-  n.className='pillar-node'+(i===0?' active':'');
-  n.style.setProperty('--ang',(360/PILLARS.length*i)+'deg');
-  n.textContent=name;
-  n.addEventListener('click',()=>{
-    [...ring.querySelectorAll('.pillar-node')].forEach(x=>x.classList.remove('active'));
-    n.classList.add('active');
-    pTitle.textContent=PILLARS[i][0]; pDesc.textContent=PILLARS[i][1];
-  });
-  ring.appendChild(n);
-});
-
-// needs selector
-const needGrid=document.getElementById('needGrid'), needResult=document.getElementById('needResult');
-const selectedNeeds=new Set();
-if(needGrid && needResult) needGrid.querySelectorAll('.need-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    btn.classList.toggle('active');
-    if(btn.classList.contains('active')) selectedNeeds.add(btn); else selectedNeeds.delete(btn);
-    if(selectedNeeds.size===0){ needResult.innerHTML='<p class="ph">Pick one or more above and we\'ll show you where to start.</p>'; return; }
-    let html='';
-    const tagSet=new Set();
-    [...selectedNeeds].forEach(b=>{ html+=`<p style="margin-bottom:.5rem">${b.dataset.r}</p>`; b.dataset.t.split(',').forEach(t=>tagSet.add(t)); });
-    html+=`<div class="need-tags">${[...tagSet].map(t=>`<span>${t}</span>`).join('')}</div>`;
-    needResult.innerHTML=html;
-  });
-});
-
-document.getElementById('quoteForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const msg=document.getElementById('formMsg');
-  const data=new FormData(e.target);
-  if(!data.get('name')||!data.get('email')){ msg.textContent='Please add your name and email.'; msg.className='form-msg'; return; }
-  msg.textContent="Thanks — we'll be in touch within one business day."; msg.className='form-msg ok';
-  e.target.reset();
-});
-
-const problemData={1:{title:'Nobody finds us',focus:'SEO · AI Search · Local SEO · Content',goal:'Improve visibility and help the right customers discover your business.'},2:{title:"People find us, but don't enquire",focus:'Website · UX · Conversion Optimization · Branding',goal:'Turn existing attention and website visits into more enquiries.'},3:{title:'We get enquiries, but lose them',focus:'CRM · Email Marketing · Automation · Lead Management',goal:'Respond faster, follow up consistently, and reduce lost opportunities.'},4:{title:"Customers don't return",focus:'Email Marketing · Automation · Content · Customer Retention',goal:'Build stronger relationships and give existing customers reasons to come back.'},5:{title:'Our marketing is all over the place',focus:'Strategy · Branding · Digital Marketing · Analytics · Automation',goal:'Connect your channels into one clear marketing system.'},6:{title:"We're launching something new",focus:'Strategy · Branding · Website · Content · SEO · Launch Marketing',goal:'Build the right foundation, create awareness, and give your launch a clear path to market.'}};
-document.querySelectorAll('.problem-option').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.problem-option').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const d=problemData[btn.dataset.problem],box=document.getElementById('problemResult');box.querySelector('.problem-result-number').textContent=String(btn.dataset.problem).padStart(2,'0');box.querySelector('h3').textContent=d.title;box.querySelectorAll('p')[0].innerHTML='<strong>Focus on:</strong> '+d.focus;box.querySelectorAll('p')[1].innerHTML='<strong>Goal:</strong> '+d.goal;}));
-</script>
 </body>
 </html>
