@@ -129,6 +129,32 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper
 body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .cursor-dot{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--orange);pointer-events:none;z-index:999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:difference}
 .cursor-dot.big{width:38px;height:38px;background:#fff}
+
+/* Marketing problem selector */
+.problem-section{padding:96px 0;background:var(--paper);border-top:1px solid var(--line)}
+.problem-section .section-head{max-width:760px;margin-bottom:42px}
+.problem-section .section-head h2{font-size:clamp(38px,5vw,64px);margin:8px 0 14px}
+.problem-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;max-width:1080px}
+.problem-checklist{display:grid;gap:10px}
+.problem-option{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:var(--fog);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:17px 18px;font:600 14px "Space Grotesk",sans-serif;cursor:pointer;transition:transform .16s,border-color .16s,background .16s}
+.problem-option:hover{transform:translateX(4px);border-color:var(--orange)}
+.problem-option.active{border-color:var(--orange);background:var(--paper);box-shadow:0 10px 28px rgba(17,17,17,.07)}
+.check-box{width:22px;height:22px;border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;flex:0 0 22px;color:transparent;font-size:12px}
+.problem-option.active .check-box{background:var(--orange);border-color:var(--orange);color:#fff}
+.problem-result{min-height:285px;padding:36px;background:var(--ink);color:#fff;border-radius:12px;position:relative;overflow:hidden}
+.problem-result:after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(244,98,13,.3);border-radius:50%;right:-90px;bottom:-100px}
+.problem-result-number{font:700 12px "Space Grotesk";color:var(--orange);letter-spacing:.08em}
+.problem-result h3{font-size:clamp(28px,3.2vw,44px);margin:12px 0 24px;color:#fff}
+.problem-result p{color:#d9d4cd;max-width:640px}
+.problem-result strong{color:#fff}
+.problem-note{margin-top:30px;max-width:850px;color:var(--slate);font-size:.9rem}
+.service{padding:88px 0;border-top:1px solid var(--line)}
+.service-grid{display:grid;grid-template-columns:72px minmax(0,1fr)!important;gap:34px;align-items:start;max-width:1000px;margin:0 auto}
+.service-grid>div:nth-child(2){min-width:0}
+.service h2,.service h3{margin-top:0}
+.service ul{max-width:900px}
+@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:42px 1fr!important}.problem-result{min-height:0}}
+@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}.service-grid{grid-template-columns:1fr!important}}
 </style>
 </head>
 <body>
@@ -202,33 +228,30 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 </div>
 </div></section>
 
-<section class="full-picture" id="services">
+<section class="problem-section" id="problem">
   <div class="wrap">
-    <div class="full-picture-grid">
-      <div class="full-picture-copy">
-        <span class="kicker">THE FULL PICTURE</span>
-        <h2>Marketing should fit the business, not the other way around.</h2>
-        <p>Marketing is different for every business. A local service company does not need the same strategy as an online store, SaaS company, professional firm, or growing startup.</p>
-        <p>That is why our services can work independently or as part of a larger growth system. We start with what the business needs, then connect the channels that support the customer journey.</p>
-        <p class="full-picture-note"><strong>One customer journey. Four jobs.</strong> Each stage has a clear purpose, and each marketing channel has a role to play.</p>
+    <div class="section-head">
+      <p class="eyebrow">WHAT'S THE PROBLEM?</p>
+      <h2>Not every business needs more marketing.</h2>
+      <p>Sometimes, you need to fix what is stopping your marketing from working. Tell us what you're struggling with.</p>
+    </div>
+    <div class="problem-layout">
+      <div class="problem-checklist">
+        <button class="problem-option active" type="button" data-problem="1"><span class="check-box">✓</span><span>Nobody finds us</span></button>
+        <button class="problem-option" type="button" data-problem="2"><span class="check-box">✓</span><span>People find us, but don't enquire</span></button>
+        <button class="problem-option" type="button" data-problem="3"><span class="check-box">✓</span><span>We get enquiries, but lose them</span></button>
+        <button class="problem-option" type="button" data-problem="4"><span class="check-box">✓</span><span>Customers don't return</span></button>
+        <button class="problem-option" type="button" data-problem="5"><span class="check-box">✓</span><span>Our marketing is all over the place</span></button>
+        <button class="problem-option" type="button" data-problem="6"><span class="check-box">✓</span><span>We're launching something new</span></button>
       </div>
-      <div class="journey-system">
-        <div class="journey-system-head">
-          <div><span class="kicker">SEE THE SYSTEM</span><h3>From first impression to repeat customer.</h3></div>
-          <span class="system-label">CONNECTED JOURNEY</span>
-        </div>
-        <div class="journey-steps">
-          <button class="journey-step active" type="button" data-stage="discover"><span>01</span><b>Discover</b><small>Search · Social · Paid</small></button>
-          <div class="journey-arrow">→</div>
-          <button class="journey-step" type="button" data-stage="consider"><span>02</span><b>Build Trust</b><small>Content · Brand · Proof</small></button>
-          <div class="journey-arrow">→</div>
-          <button class="journey-step" type="button" data-stage="convert"><span>03</span><b>Convert</b><small>Landing · Offer · Email</small></button>
-          <div class="journey-arrow">→</div>
-          <button class="journey-step" type="button" data-stage="retain"><span>04</span><b>Grow</b><small>Retention · Automation · CRM</small></button>
-        </div>
-        <div class="journey-stage" id="journeyStage"><span>01 · DISCOVER</span><p>Search, social and paid campaigns put the business in front of people who may need it.</p></div>
+      <div class="problem-result" id="problemResult">
+        <div class="problem-result-number">01</div>
+        <h3>Nobody finds us</h3>
+        <p><strong>Focus on:</strong> SEO · AI Search · Local SEO · Content</p>
+        <p><strong>Goal:</strong> Improve visibility and help the right customers discover your business.</p>
       </div>
     </div>
+    <p class="problem-note">No complicated marketing jargon. No one-size-fits-all package. Just a clearer view of what may be holding your business back and which areas could make the biggest difference.</p>
   </div>
 </section>
 
@@ -308,46 +331,214 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
   </div>
 </footer>
 
-
-
 <script>
+const root=document.documentElement;
+const navLogo=document.getElementById('navLogo');
+function syncLogo(){ navLogo.src = root.getAttribute('data-theme')==='dark' ? navLogo.dataset.dark : navLogo.dataset.light; }
+try{ if(localStorage.getItem('markify-theme')==='dark') root.setAttribute('data-theme','dark'); }catch(e){}
+syncLogo();
+document.getElementById('themeToggle').addEventListener('click',()=>{
+  const isDark=root.getAttribute('data-theme')==='dark';
+  root.setAttribute('data-theme', isDark?'light':'dark');
+  try{localStorage.setItem('markify-theme', isDark?'light':'dark');}catch(e){}
+  syncLogo();
+});
 
-const themeToggle=document.getElementById('themeToggle');
-const savedTheme=localStorage.getItem('markify-theme');
-if(savedTheme==='dark') document.body.classList.add('dark');
-if(themeToggle) themeToggle.addEventListener('click',()=>{document.body.classList.toggle('dark');localStorage.setItem('markify-theme',document.body.classList.contains('dark')?'dark':'light');});
-const burger=document.getElementById('burger'), nav=document.getElementById('navlinks');
-if(burger&&nav) burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');burger.setAttribute('aria-expanded',open);});
-document.querySelectorAll('.nav-top').forEach(btn=>btn.addEventListener('click',e=>{if(btn.tagName==='A')return;e.stopPropagation();const li=btn.closest('.has-dropdown');const wasOpen=li.classList.contains('open');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));if(!wasOpen)li.classList.add('open');}));
-document.addEventListener('click',e=>{if(!e.target.closest('.has-dropdown'))document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));});
-nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger?.setAttribute('aria-expanded','false');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));}));
+// technology logo strip
+const techs=[
+  ['Google','google'],
+  ['Google Analytics 4','googleanalytics'],
+  ['Google Search Console','googlesearchconsole'],
+  ['Google Ads','googleads'],
+  ['Meta','meta'],
+  ['TikTok','tiktok'],
+  ['Shopify','shopify'],
+  ['WordPress','wordpress'],
+  ['WooCommerce','woocommerce'],
+  ['Cloudflare','cloudflare'],
+  ['GoDaddy','godaddy'],
+  ['Hostinger','hostinger']
+];
+const track=document.getElementById('marqueeTrack');
+const chipHTML=techs.map(([name,slug])=>`<div class="logo-chip"><span class="lic"><img src="https://cdn.simpleicons.org/${slug}" alt="${name} logo" loading="lazy" decoding="async"></span><span>${name}</span></div>`).join('');
+track.innerHTML=chipHTML+chipHTML;
+
 if(window.matchMedia('(hover:hover)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
- document.body.classList.add('has-cursor');
- const dot=document.createElement('div');dot.className='cursor-dot';document.body.appendChild(dot);
- window.addEventListener('pointermove',e=>{dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;});
- document.querySelectorAll('a,button,.card,summary').forEach(el=>{el.addEventListener('pointerenter',()=>dot.classList.add('big'));el.addEventListener('pointerleave',()=>dot.classList.remove('big'));});
- document.querySelectorAll('.btn').forEach(btn=>{btn.addEventListener('pointermove',e=>{const r=btn.getBoundingClientRect();btn.style.transform=`translate(${((e.clientX-r.left-r.width/2)*.3).toFixed(1)}px,${((e.clientY-r.top-r.height/2)*.3).toFixed(1)}px)`;});btn.addEventListener('pointerleave',()=>{btn.style.transform='';});});
+  document.body.classList.add('has-cursor');
+  const dot=document.createElement('div'); dot.className='cursor-dot'; document.body.appendChild(dot);
+  window.addEventListener('pointermove',e=>{dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;});
+  document.querySelectorAll('a,button,.card,summary').forEach(el=>{
+    el.addEventListener('pointerenter',()=>dot.classList.add('big'));
+    el.addEventListener('pointerleave',()=>dot.classList.remove('big'));
+  });
+  document.querySelectorAll('.btn').forEach(btn=>{
+    btn.addEventListener('pointermove',e=>{
+      const r=btn.getBoundingClientRect();
+      btn.style.transform=`translate(${((e.clientX-r.left-r.width/2)*.3).toFixed(1)}px,${((e.clientY-r.top-r.height/2)*.3).toFixed(1)}px)`;
+    });
+    btn.addEventListener('pointerleave',()=>{btn.style.transform='';});
+  });
 }
-const channelData={discover:'SEO, paid search and social content help people discover the business.',consider:'Content, branding and useful information help prospects evaluate the business.',convert:'Landing pages, offers and email follow-up help turn interest into action.',retain:'Email, CRM and automation help keep customers engaged after the first purchase.'};
-document.querySelectorAll('.channel-pill').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.channel-pill').forEach(x=>x.classList.toggle('active',x===btn));document.querySelectorAll('.journey-node').forEach(x=>x.classList.toggle('active',x.dataset.node===btn.dataset.channel));const n=document.getElementById('channelNote');if(n)n.textContent=channelData[btn.dataset.channel]||'';}));
-document.querySelectorAll('.journey-node').forEach(node=>node.addEventListener('click',()=>document.querySelector('.channel-pill[data-channel="'+node.dataset.node+'"]')?.click()));
 
+const tiltPanel=document.getElementById('tiltPanel');
+if(tiltPanel && window.matchMedia('(hover:hover)').matches){
+  const panel=tiltPanel.querySelector('.panel');
+  tiltPanel.addEventListener('pointermove',e=>{
+    const r=tiltPanel.getBoundingClientRect();
+    const px=(e.clientX-r.left)/r.width-.5, py=(e.clientY-r.top)/r.height-.5;
+    panel.style.transform=`rotateX(${(-py*10+4).toFixed(2)}deg) rotateY(${(px*14-6).toFixed(2)}deg)`;
+  });
+  tiltPanel.addEventListener('pointerleave',()=>{panel.style.transform='rotateX(4deg) rotateY(-6deg)';});
+}
 
-const journeyStage=document.getElementById('journeyStage');
-const journeyCopy={
- discover:['01 · DISCOVER','Search, social and paid campaigns put the business in front of people who may need it.'],
- consider:['02 · BUILD TRUST','Content, branding and proof help people understand the offer and feel confident about the business.'],
- convert:['03 · CONVERT','Focused landing pages, clear offers and email follow-up make the next action easier.'],
- retain:['04 · GROW','Retention, automation and CRM keep the relationship moving after the first conversion.']
+const burger=document.getElementById('burger'), nav=document.getElementById('navlinks');
+burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');burger.setAttribute('aria-expanded',open);});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded','false');document.querySelectorAll('.has-dropdown.open').forEach(li=>li.classList.remove('open'));}));
+
+// dropdown mega-menu
+document.querySelectorAll('.nav-top').forEach(btn=>{
+  btn.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    const li=btn.closest('.has-dropdown');
+    const wasOpen=li.classList.contains('open');
+    document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));
+    if(!wasOpen) li.classList.add('open');
+  });
+});
+document.addEventListener('click',(e)=>{
+  if(!e.target.closest('.has-dropdown')) document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));
+});
+
+const sections=[...document.querySelectorAll('section[id]')];
+const navA=document.querySelectorAll('[data-nav]');
+sections.forEach(s=>new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){navA.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-45% 0px -50% 0px'}).observe(s));
+
+document.querySelectorAll('.reveal').forEach(el=>{
+  new IntersectionObserver((es,ob)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ob.unobserve(e.target);}})},{threshold:.15}).observe(el);
+});
+
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const target=parseFloat(el.dataset.count), suf=el.dataset.suffix||'', dec=parseInt(el.dataset.decimal||'0');
+  new IntersectionObserver((es,ob)=>{es.forEach(e=>{
+    if(e.isIntersecting){
+      let cur=0; const step=target/40;
+      const t=setInterval(()=>{cur+=step; if(cur>=target){cur=target; clearInterval(t);} el.textContent=cur.toFixed(dec)+suf;},25);
+      ob.unobserve(e.target);
+    }
+  })},{threshold:.6}).observe(el);
+});
+
+// services: tabs + detail panel
+const SERVICES=[
+  {name:'Technology',ic:'<path d="M4 17V7l8-4 8 4v10l-8 4-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/>',tagline:'Build the systems behind your business.',items:[
+    ['Web Development','Business websites, corporate websites, landing pages, portals and custom web applications.'],
+    ['App Development','iOS, Android, cross-platform and business applications.'],
+    ['SaaS & Software Development','Custom SaaS platforms, business software, dashboards, CRM, ERP and internal tools.'],
+    ['API & System Integration','Connect your software, platforms, databases, payment systems and business tools.']]},
+  {name:'Growth & Search',ic:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',tagline:'Put your business in front of people actively searching for what you offer.',items:[
+    ['SEO · Local · Technical','Improve rankings and visibility across traditional search.'],
+    ['AEO & AI Search','Optimize your content for answer engines and AI-powered search experiences.'],
+    ['Content Strategy','Build content around the questions and search behavior of your customers.'],
+    ['Conversion Optimization','Turn more visitors into enquiries, customers and sales.']]},
+  {name:'Marketing',ic:'<rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M8 21h8M12 18v3"/>',tagline:'Turn attention into business.',items:[
+    ['Digital Marketing','Build an integrated acquisition strategy across the channels that matter.'],
+    ['Social Media Marketing','Strategy, content, management, campaigns and community growth.'],
+    ['Email Marketing','Campaigns, newsletters, automation, segmentation and customer journeys.'],
+    ['Paid Advertising','Campaign strategy, landing pages, tracking and performance optimization.'],
+    ['Lead Generation','Build systems that consistently attract and qualify potential customers.']]},
+  {name:'Creative',ic:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 000 18z" fill="currentColor" stroke="none"/>',tagline:'Make your business look as good as it performs.',items:[
+    ['Branding & Identity','Logos, brand systems, guidelines and visual identity.'],
+    ['Graphic Design','Social creatives, advertisements, presentations and marketing materials.'],
+    ['Video Production & Editing','Short-form content, ads, corporate videos, explainers and social videos.'],
+    ['UI/UX Design','Interfaces designed around usability, customer journeys and business goals.']]},
+  {name:'Commerce',ic:'<path d="M3 6l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="1.5"/>',tagline:'Build and grow your online store.',items:[
+    ['Shopify','Store development, customization and optimization.'],
+    ['WooCommerce','WordPress-based eCommerce development and management.'],
+    ['eCommerce Growth','SEO, conversion optimization, email marketing, automation and retention.']]},
+  {name:'Automation & Systems',ic:'<path d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.3-5 3 2.2 2.7 5 3 5 1.1 5 3-2.2 3-5 3-5-1.1-5-3"/>',tagline:'Spend less time managing repetitive work.',items:[
+    ['Business Automation','Automate repetitive processes and workflows.'],
+    ['CRM & ERP','Build or integrate systems that bring your business operations together.'],
+    ['Analytics & Reporting','Turn business and marketing data into useful decisions.'],
+    ['Digital Operations','Technology, processes and systems that make growing businesses easier to manage.']]}
+];
+const svcGrid=document.getElementById('svcGrid');
+const SVC_SLUGS=['svc-technology','svc-growth','svc-marketing','svc-creative','svc-commerce','svc-automation'];
+svcGrid.innerHTML=SERVICES.map((c,i)=>`
+  <div class="svc-card" id="${SVC_SLUGS[i]}" style="scroll-margin-top:90px">\n    ${i===2?'<a class="svc-page-link" href="marketing.html" aria-label="Open Marketing services page">':''}
+    <div class="svc-card-head"><span class="ic-badge"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">${c.ic}</svg></span><h3>${c.name}</h3></div>
+    <p class="tagline">${c.tagline}</p>
+    <ul>${c.items.map(([n,d])=>`<li><b>${n}</b><span>${d}</span></li>`).join('')}</ul>
+    ${i===2?'</a>':''}
+  </div>`).join('');
+
+// pillar hub diagram
+const PILLARS=[
+  ['Strategy',"Understand the business — where you are, what's stopping growth, and what's being missed."],
+  ['Technology','Build what is required: sites, apps, SaaS platforms and integrations.'],
+  ['Marketing','Reach the right audience across the channels that matter.'],
+  ['Creative','Communicate the value with branding, design and video.'],
+  ['Data','Measure what actually happens, not just what launched.'],
+  ['Automation','Improve how the business operates day to day.'],
+  ['Growth','Continuously improve the system as the business evolves.']
+];
+const ring=document.getElementById('pillarRing');
+const pTitle=document.getElementById('pillarTitle'), pDesc=document.getElementById('pillarDesc');
+PILLARS.forEach(([name],i)=>{
+  const n=document.createElement('button');
+  n.className='pillar-node'+(i===0?' active':'');
+  n.style.setProperty('--ang',(360/PILLARS.length*i)+'deg');
+  n.textContent=name;
+  n.addEventListener('click',()=>{
+    [...ring.querySelectorAll('.pillar-node')].forEach(x=>x.classList.remove('active'));
+    n.classList.add('active');
+    pTitle.textContent=PILLARS[i][0]; pDesc.textContent=PILLARS[i][1];
+  });
+  ring.appendChild(n);
+});
+
+// needs selector
+const needGrid=document.getElementById('needGrid'), needResult=document.getElementById('needResult');
+const selectedNeeds=new Set();
+needGrid.querySelectorAll('.need-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btn.classList.toggle('active');
+    if(btn.classList.contains('active')) selectedNeeds.add(btn); else selectedNeeds.delete(btn);
+    if(selectedNeeds.size===0){ needResult.innerHTML='<p class="ph">Pick one or more above and we\'ll show you where to start.</p>'; return; }
+    let html='';
+    const tagSet=new Set();
+    [...selectedNeeds].forEach(b=>{ html+=`<p style="margin-bottom:.5rem">${b.dataset.r}</p>`; b.dataset.t.split(',').forEach(t=>tagSet.add(t)); });
+    html+=`<div class="need-tags">${[...tagSet].map(t=>`<span>${t}</span>`).join('')}</div>`;
+    needResult.innerHTML=html;
+  });
+});
+
+document.getElementById('quoteForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const msg=document.getElementById('formMsg');
+  const data=new FormData(e.target);
+  if(!data.get('name')||!data.get('email')){ msg.textContent='Please add your name and email.'; msg.className='form-msg'; return; }
+  msg.textContent="Thanks — we'll be in touch within one business day."; msg.className='form-msg ok';
+  e.target.reset();
+});
+
+const problemData={
+  1:{title:'Nobody finds us',focus:'SEO · AI Search · Local SEO · Content',goal:'Improve visibility and help the right customers discover your business.'},
+  2:{title:"People find us, but don't enquire",focus:'Website · UX · Conversion Optimization · Branding',goal:'Turn existing attention and website visits into more enquiries.'},
+  3:{title:'We get enquiries, but lose them',focus:'CRM · Email Marketing · Automation · Lead Management',goal:'Respond faster, follow up consistently, and reduce lost opportunities.'},
+  4:{title:"Customers don't return",focus:'Email Marketing · Automation · Content · Customer Retention',goal:'Build stronger relationships and give existing customers reasons to come back.'},
+  5:{title:'Our marketing is all over the place',focus:'Strategy · Branding · Digital Marketing · Analytics · Automation',goal:'Connect your channels into one clear marketing system.'},
+  6:{title:"We're launching something new",focus:'Strategy · Branding · Website · Content · SEO · Launch Marketing',goal:'Build the right foundation, create awareness, and give your launch a clear path to market.'}
 };
-document.querySelectorAll('.journey-step').forEach(btn=>{
+document.querySelectorAll('.problem-option').forEach(btn=>{
  btn.addEventListener('click',()=>{
-  document.querySelectorAll('.journey-step').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.problem-option').forEach(x=>x.classList.remove('active'));
   btn.classList.add('active');
-  const data=journeyCopy[btn.dataset.stage];
-  journeyStage.querySelector('span').textContent=data[0];
-  journeyStage.querySelector('p').textContent=data[1];
+  const d=problemData[btn.dataset.problem], box=document.getElementById('problemResult');
+  box.querySelector('.problem-result-number').textContent=String(btn.dataset.problem).padStart(2,'0');
+  box.querySelector('h3').textContent=d.title;
+  box.querySelectorAll('p')[0].innerHTML='<strong>Focus on:</strong> '+d.focus;
+  box.querySelectorAll('p')[1].innerHTML='<strong>Goal:</strong> '+d.goal;
  });
 });
 </script>
-</body></html>
+</body>
