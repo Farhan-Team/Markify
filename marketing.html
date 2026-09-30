@@ -528,7 +528,7 @@ const PILLARS=[
 ];
 const ring=document.getElementById('pillarRing');
 const pTitle=document.getElementById('pillarTitle'), pDesc=document.getElementById('pillarDesc');
-PILLARS.forEach(([name],i)=>{
+if(ring && pTitle && pDesc) PILLARS.forEach(([name],i)=>{
   const n=document.createElement('button');
   n.className='pillar-node'+(i===0?' active':'');
   n.style.setProperty('--ang',(360/PILLARS.length*i)+'deg');
@@ -544,7 +544,7 @@ PILLARS.forEach(([name],i)=>{
 // needs selector
 const needGrid=document.getElementById('needGrid'), needResult=document.getElementById('needResult');
 const selectedNeeds=new Set();
-needGrid.querySelectorAll('.need-btn').forEach(btn=>{
+if(needGrid && needResult) needGrid.querySelectorAll('.need-btn').forEach(btn=>{
   btn.addEventListener('click',()=>{
     btn.classList.toggle('active');
     if(btn.classList.contains('active')) selectedNeeds.add(btn); else selectedNeeds.delete(btn);
@@ -570,3 +570,4 @@ const problemData={1:{title:'Nobody finds us',focus:'SEO · AI Search · Local S
 document.querySelectorAll('.problem-option').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.problem-option').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const d=problemData[btn.dataset.problem],box=document.getElementById('problemResult');box.querySelector('.problem-result-number').textContent=String(btn.dataset.problem).padStart(2,'0');box.querySelector('h3').textContent=d.title;box.querySelectorAll('p')[0].innerHTML='<strong>Focus on:</strong> '+d.focus;box.querySelectorAll('p')[1].innerHTML='<strong>Goal:</strong> '+d.goal;}));
 </script>
 </body>
+</html>
