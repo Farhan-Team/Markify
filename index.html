@@ -184,7 +184,8 @@ details p{margin-top:.6rem;font-size:.9rem}
 .rail-arrows svg{width:15px;height:15px}
 /* services grid (everything visible, no click required) */
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem}
-.svc-page-link{display:block;color:inherit;text-decoration:none}.svc-page-link:hover h3{color:var(--orange)}\n.svc-card{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:1.6rem;transition:border-color .2s}
+.svc-page-link{display:block;color:inherit;text-decoration:none}.svc-page-link:hover h3{color:var(--orange)}
+.svc-card{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:1.6rem;transition:border-color .2s}
 .svc-card:hover{border-color:var(--orange)}
 .svc-card-head{display:flex;align-items:center;gap:.7rem;margin-bottom:.3rem}
 .svc-card-head .ic-badge{width:40px;height:40px;margin-bottom:0;background:var(--paper)}
@@ -706,61 +707,6 @@ svcGrid.innerHTML=SERVICES.map((c,i)=>`
     <p class="tagline">${c.tagline}</p>
     <ul>${c.items.map(([n,d])=>`<li><b>${n}</b><span>${d}</span></li>`).join('')}</ul>
     ${i===2?'</a>':''}
-  </div>`).join('');
-
-// pillar hub diagram
-const PILLARS=[
-  ['Strategy',"Understand the business — where you are, what's stopping growth, and what's being missed."],
-  ['Technology','Build what is required: sites, apps, SaaS platforms and integrations.'],
-  ['Marketing','Reach the right audience across the channels that matter.'],
-  ['Creative','Communicate the value with branding, design and video.'],
-  ['Data','Measure what actually happens, not just what launched.'],
-  ['Automation','Improve how the business operates day to day.'],
-  ['Growth','Continuously improve the system as the business evolves.']
-];
-const ring=document.getElementById('pillarRing');
-const pTitle=document.getElementById('pillarTitle'), pDesc=document.getElementById('pillarDesc');
-PILLARS.forEach(([name],i)=>{
-  const n=document.createElement('button');
-  n.className='pillar-node'+(i===0?' active':'');
-  n.style.setProperty('--ang',(360/PILLARS.length*i)+'deg');
-  n.textContent=name;
-  n.addEventListener('click',()=>{
-    [...ring.querySelectorAll('.pillar-node')].forEach(x=>x.classList.remove('active'));
-    n.classList.add('active');
-    pTitle.textContent=PILLARS[i][0]; pDesc.textContent=PILLARS[i][1];
-  });
-  ring.appendChild(n);
-});
-
-// needs selector
-const needGrid=document.getElementById('needGrid'), needResult=document.getElementById('needResult');
-const selectedNeeds=new Set();
-needGrid.querySelectorAll('.need-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    btn.classList.toggle('active');
-    if(btn.classList.contains('active')) selectedNeeds.add(btn); else selectedNeeds.delete(btn);
-    if(selectedNeeds.size===0){ needResult.innerHTML='<p class="ph">Pick one or more above and we\'ll show you where to start.</p>'; return; }
-    let html='';
-    const tagSet=new Set();
-    [...selectedNeeds].forEach(b=>{ html+=`<p style="margin-bottom:.5rem">${b.dataset.r}</p>`; b.dataset.t.split(',').forEach(t=>tagSet.add(t)); });
-    html+=`<div class="need-tags">${[...tagSet].map(t=>`<span>${t}</span>`).join('')}</div>`;
-    needResult.innerHTML=html;
-  });
-});
-
-document.getElementById('quoteForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const msg=document.getElementById('formMsg');
-  const data=new FormData(e.target);
-  if(!data.get('name')||!data.get('email')){ msg.textContent='Please add your name and email.'; msg.className='form-msg'; return; }
-  msg.textContent="Thanks — we'll be in touch within one business day."; msg.className='form-msg ok';
-  e.target.reset();
-});
-</script>
-</body>
-</html>
-
   </div>`).join('');
 
 // pillar hub diagram
