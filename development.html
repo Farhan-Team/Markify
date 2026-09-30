@@ -33,18 +33,59 @@ footer{background:#0a0a0a;color:#b9b4aa;padding:2.6rem 0 1.4rem;font-size:.82rem
 </style>
 </head>
 <body>
-<header><nav class="nav wrap">
-<a class="brand" href="/" aria-label="Markify X home"><img id="navLogo" src="assets/logo-main.png" data-light="assets/logo-main.png" data-dark="assets/logo-white.png" alt="Markify X logo"></a>
-<ul class="navlinks" id="navlinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html#about">About Us</a></li>
-<li><a href="marketing.html">Marketing</a></li>
-<li><a href="development.html">Development</a></li>
-<li><a href="index.html#case">Case Studies</a></li>
-<li><a href="index.html#contact">Consultation</a></li>
-</ul>
-<div class="navcta"><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.3A9 9 0 1111.7 3 7 7 0 0021 12.3z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></button><a class="btn alt" href="index.html#contact">Get a Free Consultation Call</a><button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
-</nav></header>
+<header>
+  <nav class="nav wrap">
+    <a class="brand" href="/" aria-label="Markify X home"><img id="navLogo" src="assets/logo-main.png" data-light="assets/logo-main.png" data-dark="assets/logo-white.png" alt="Markify X logo"></a>
+    <ul class="navlinks" id="navlinks">
+      <li class="has-dropdown">
+        <a class="nav-top" href="marketing.html" aria-label="Open Marketing services page">Marketing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dropdown cols2">
+          <a href="#svc-marketing">Digital Marketing</a>
+          <a href="#svc-growth">SEO &amp; AI Search</a>
+          <a href="#svc-commerce">eCommerce</a>
+          <a href="#svc-marketing">Social Media</a>
+          <a href="#svc-creative">Branding &amp; Design</a>
+          <a href="#svc-creative">Video Editing</a>
+          <a href="#svc-marketing">Email Marketing</a>
+          <a href="#svc-automation">Business Automation</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" type="button">Development <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown">
+          <a href="#svc-technology">Web Development</a>
+          <a href="#svc-technology">App Development</a>
+          <a href="#svc-technology">SaaS &amp; Software</a>
+          <a href="#svc-commerce">eCommerce &amp; Shopify Stores</a>
+          <a href="#svc-automation">Business Automation</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" type="button">Case Studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown">
+          <a href="#about">About</a>
+          <a href="#case">Portfolio</a>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" type="button">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="dropdown">
+          <a href="#blog">Blogs</a>
+          <a href="#needs">Analysis Tools</a>
+        </div>
+      </li>
+      <li class="mobile-cta"><a class="btn alt" href="#contact">Get a Free Consultation Call</a></li>
+    </ul>
+    <div class="navcta">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark theme">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.3A9 9 0 1111.7 3 7 7 0 0021 12.3z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      </button>
+      <a class="btn alt" href="#contact">Get a Free Consultation Call</a>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
 
 <main>
 <section class="hero"><div class="wrap">
