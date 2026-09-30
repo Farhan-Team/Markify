@@ -77,13 +77,29 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .contact{background:linear-gradient(135deg,#F4620D 0%,#FF8A3D 100%);color:#fff;clip-path:polygon(0 4%,100% 0,100% 100%,0 100%)}
 .contact .wrap{padding-block:clamp(3rem,6vw,5.2rem)}
 .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.6rem;align-items:start}
-.contact h2{color:#fff}.contact p{color:rgba(255,255,255,.88)}.contact .eyebrow{color:#3A1400}
-.contact ul.hint{list-style:none;margin-top:1.2rem;display:grid;gap:.4rem}.contact ul.hint li{color:rgba(255,255,255,.85);font-size:.86rem}
+.contact h2{color:#fff}
+.contact p{color:rgba(255,255,255,.88)}
+.contact .eyebrow{color:#3A1400}
+.contact ul.hint{list-style:none;margin-top:1.2rem;display:grid;gap:.4rem}
+.contact ul.hint li{color:rgba(255,255,255,.85);font-size:.86rem}
+form{display:grid;gap:.9rem;background:#fff;padding:1.5rem;border-radius:10px;box-shadow:0 30px 50px -20px rgba(0,0,0,.3)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
 input,textarea,select{background:var(--fog);border:1px solid var(--line);color:var(--ink);padding:.8rem 1rem;border-radius:6px;font-family:inherit;font-size:.9rem;width:100%}
-input::placeholder,textarea::placeholder{color:var(--slate)} input:focus,textarea:focus{border-color:var(--orange)}
-.form-msg{font-size:.82rem;min-height:1.2em;color:var(--slate)} .form-msg.ok{color:#1a7f37}
+select{appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2357534B" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>');background-repeat:no-repeat;background-position:right 1rem center;background-size:16px;padding-right:2.4rem}
+input::placeholder,textarea::placeholder{color:var(--slate)}
+input:focus,textarea:focus{border-color:var(--orange)}
+label.fl{display:block;font-size:.78rem;font-weight:600;font-family:'Space Grotesk',sans-serif;color:var(--ink);margin-bottom:.3rem}
+.chip-grid{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip-opt{background:var(--fog);border:1px solid var(--line);border-radius:20px;padding:.4rem .85rem;font-size:.78rem;cursor:pointer;color:var(--ink)}
+.chip-opt.active{background:var(--orange);border-color:var(--orange);color:#fff}
+.seg{display:flex;gap:.5rem}
+.seg button{flex:1;background:var(--fog);border:1px solid var(--line);border-radius:6px;padding:.6rem;font-size:.82rem;cursor:pointer;color:var(--ink)}
+.seg button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+form .btn.alt{background:#111111;border-color:#111111;justify-self:start}
+.form-msg{font-size:.82rem;min-height:1.2em;color:var(--slate)}
+.form-msg.ok{color:#1a7f37}
 
+/* EXACT HOMEPAGE CONTACT LAYOUT */
 /* Homepage navigation — exact supporting styles */
 .theme-toggle{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink)}
 .theme-toggle svg{width:18px;height:18px}
@@ -441,8 +457,6 @@ footer{background:#0A0A0A;color:#B9B4AA;padding-block:2.6rem 1.4rem}
 :root[data-theme="dark"] .connected .points b{color:#FFFFFF}
 :root[data-theme="dark"] .connected .points span{color:#C8C3BB}
 
-/* LAST CONTACT WIDTH — MATCH HOMEPAGE */
-.contact .wrap{max-width:1180px;margin-left:auto;margin-right:auto}
 </style></style>
 </head>
 <body>
