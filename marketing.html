@@ -83,6 +83,15 @@ header{position:sticky!important;top:0!important;z-index:50!important;width:100%
 .journey-chart .chart-values{font:700 14px "Space Grotesk";fill:var(--ink)}
 .journey-chart .chart-axis{font:600 11px "Inter";fill:var(--slate)}
 
+
+/* Exact homepage interaction system */
+.btn{position:relative;display:inline-flex;align-items:center;gap:.5rem;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.92rem;padding:.85rem 1.5rem;border-radius:3px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none;transition:transform .12s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:var(--orange);border-color:var(--orange);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink)}
+body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
+.cursor-dot{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--orange);pointer-events:none;z-index:999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:difference}
+.cursor-dot.big{width:38px;height:38px;background:#fff}
 </style>
 </head>
 <body>
@@ -277,16 +286,26 @@ header{position:sticky!important;top:0!important;z-index:50!important;width:100%
 
 
 <script>
-const root=document.documentElement,navLogo=document.getElementById('navLogo'),themeToggle=document.getElementById('themeToggle'),burger=document.getElementById('burger'),nav=document.getElementById('navlinks');
-function syncLogo(){if(navLogo){const d=root.getAttribute('data-theme')==='dark';navLogo.src=d?(navLogo.dataset.dark||navLogo.src):(navLogo.dataset.light||navLogo.src);}}
-try{if(localStorage.getItem('markify-theme')==='dark')root.setAttribute('data-theme','dark')}catch(e){} syncLogo();
-if(themeToggle)themeToggle.addEventListener('click',()=>{const d=root.getAttribute('data-theme')==='dark';root.setAttribute('data-theme',d?'light':'dark');try{localStorage.setItem('markify-theme',d?'light':'dark')}catch(e){}syncLogo()});
-if(burger&&nav)burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',String(o))});
-document.querySelectorAll('.nav-top').forEach(el=>el.addEventListener('click',e=>{if(el.tagName==='A')return;e.stopPropagation();const li=el.closest('.has-dropdown');const o=li.classList.contains('open');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));if(!o)li.classList.add('open')}));
-document.addEventListener('click',e=>{if(!e.target.closest('.has-dropdown'))document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'))});
-document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav?.classList.remove('open')));
-const notes={discover:'SEO, paid search and social content help people discover the business.',consider:'Useful content, brand clarity and strong pages help people understand the offer.',convert:'Landing pages, offers and follow-up reduce friction between interest and action.',retain:'Email, CRM workflows and automation keep the relationship moving after conversion.'};
-document.querySelectorAll('.channel-pill').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.channel;document.querySelectorAll('.channel-pill').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.journey-node').forEach(x=>x.classList.toggle('active',x.dataset.node===k));const n=document.getElementById('channelNote');if(n)n.textContent=notes[k]||''}));
-document.querySelectorAll('.journey-node').forEach(n=>n.addEventListener('click',()=>document.querySelector('.channel-pill[data-channel="'+n.dataset.node+'"]')?.click()));
+
+const themeToggle=document.getElementById('themeToggle');
+const savedTheme=localStorage.getItem('markify-theme');
+if(savedTheme==='dark') document.body.classList.add('dark');
+if(themeToggle) themeToggle.addEventListener('click',()=>{document.body.classList.toggle('dark');localStorage.setItem('markify-theme',document.body.classList.contains('dark')?'dark':'light');});
+const burger=document.getElementById('burger'), nav=document.getElementById('navlinks');
+if(burger&&nav) burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');burger.setAttribute('aria-expanded',open);});
+document.querySelectorAll('.nav-top').forEach(btn=>btn.addEventListener('click',e=>{if(btn.tagName==='A')return;e.stopPropagation();const li=btn.closest('.has-dropdown');const wasOpen=li.classList.contains('open');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));if(!wasOpen)li.classList.add('open');}));
+document.addEventListener('click',e=>{if(!e.target.closest('.has-dropdown'))document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));});
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger?.setAttribute('aria-expanded','false');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));}));
+if(window.matchMedia('(hover:hover)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+ document.body.classList.add('has-cursor');
+ const dot=document.createElement('div');dot.className='cursor-dot';document.body.appendChild(dot);
+ window.addEventListener('pointermove',e=>{dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;});
+ document.querySelectorAll('a,button,.card,summary').forEach(el=>{el.addEventListener('pointerenter',()=>dot.classList.add('big'));el.addEventListener('pointerleave',()=>dot.classList.remove('big'));});
+ document.querySelectorAll('.btn').forEach(btn=>{btn.addEventListener('pointermove',e=>{const r=btn.getBoundingClientRect();btn.style.transform=`translate(${((e.clientX-r.left-r.width/2)*.3).toFixed(1)}px,${((e.clientY-r.top-r.height/2)*.3).toFixed(1)}px)`;});btn.addEventListener('pointerleave',()=>{btn.style.transform='';});});
+}
+const channelData={discover:'SEO, paid search and social content help people discover the business.',consider:'Content, branding and useful information help prospects evaluate the business.',convert:'Landing pages, offers and email follow-up help turn interest into action.',retain:'Email, CRM and automation help keep customers engaged after the first purchase.'};
+document.querySelectorAll('.channel-pill').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.channel-pill').forEach(x=>x.classList.toggle('active',x===btn));document.querySelectorAll('.journey-node').forEach(x=>x.classList.toggle('active',x.dataset.node===btn.dataset.channel));const n=document.getElementById('channelNote');if(n)n.textContent=channelData[btn.dataset.channel]||'';}));
+document.querySelectorAll('.journey-node').forEach(node=>node.addEventListener('click',()=>document.querySelector('.channel-pill[data-channel="'+node.dataset.node+'"]')?.click()));
+
 </script>
 </body></html>
