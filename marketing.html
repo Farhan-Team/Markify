@@ -107,7 +107,7 @@ form .btn.alt{background:#111111;border-color:#111111;justify-self:start}
 :root[data-theme="dark"] .theme-toggle .i-moon{display:none}
 .theme-toggle .i-sun{display:none}
 header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding-block:14px}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-block:14px}.brand{justify-self:start}.navlinks{justify-self:center}.navcta{justify-self:end}
 .brand img{height:32px}
 .navlinks{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.88rem}
 .navlinks a{text-decoration:none;opacity:.75}
@@ -482,7 +482,7 @@ footer{background:#0A0A0A;color:#B9B4AA;padding-block:2.6rem 1.4rem}
         </div>
       </li>
       <li class="has-dropdown">
-        <button class="nav-top" type="button">Development <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <a class="nav-top" href="development.html" aria-label="Open Development services page">Development <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
         <div class="dropdown">
           <a href="#svc-technology">Web Development</a>
           <a href="#svc-technology">App Development</a>
