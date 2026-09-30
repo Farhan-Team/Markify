@@ -21,10 +21,39 @@ header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba
 .cta{padding:90px 0;background:var(--fog)}.cta h2{font-size:clamp(40px,5vw,64px);max-width:780px}.cta p{max-width:650px}.cta .btn{margin-top:20px}
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--slate)}
 @media(max-width:800px){.navlinks{display:none}.hero{padding:70px 0}.service-grid{grid-template-columns:1fr;gap:10px}.service ul{grid-template-columns:1fr}.points,.process-grid{grid-template-columns:1fr}.connected,.process,.cta{padding:70px 0}}
+
+/* Shared Markify X navigation + cursor */
+.nav{height:78px}.brand{font-size:25px}.navlinks{list-style:none;margin:0;padding:0;align-items:center}.navlinks>li{position:relative}.nav-top{display:inline-flex;align-items:center;gap:5px;border:0;background:none;padding:8px 0;font:600 14px "Space Grotesk";color:inherit;cursor:pointer}.nav-top:hover{color:var(--orange)}.chev{font-size:16px;line-height:1}.has-dropdown{position:relative}.dropdown{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);opacity:0;visibility:hidden;pointer-events:none;display:grid;gap:2px;min-width:220px;padding:10px;background:var(--paper);border:1px solid var(--line);box-shadow:0 14px 35px rgba(0,0,0,.09);transition:.18s}.dropdown.cols2{grid-template-columns:repeat(2,minmax(170px,1fr));min-width:390px}.has-dropdown.open>.dropdown{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}.dropdown a{padding:9px 11px;border-radius:4px;font:500 13px "Inter";text-decoration:none}.dropdown a:hover{background:var(--fog);color:var(--orange)}.navcta{display:flex;align-items:center;gap:10px}.theme-toggle,.burger{border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}.theme-toggle{width:40px;height:40px;border-radius:50%;font-size:18px}.burger{display:none;width:40px;height:40px;border-radius:4px}.burger span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto}.mobile-cta{display:none}.cursor-dot{position:fixed;left:0;top:0;width:9px;height:9px;border-radius:50%;background:var(--orange);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,opacity .15s}.cursor-dot.big{width:30px;height:30px;opacity:.28}.has-cursor, .has-cursor *{cursor:none!important}
+@media(max-width:900px){.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:15px 28px}.navlinks.open{display:flex;flex-direction:column;align-items:stretch;gap:4px}.navlinks.open .has-dropdown{border-bottom:1px solid var(--line)}.dropdown,.dropdown.cols2{position:static;transform:none;display:none;min-width:0;box-shadow:none;border:0;padding:4px 0 8px;grid-template-columns:1fr}.has-dropdown.open>.dropdown{display:grid;opacity:1;visibility:visible;pointer-events:auto}.nav-top{width:100%;justify-content:space-between}.navcta>.btn{display:none}.burger{display:block}.mobile-cta{display:block;padding-top:8px}.mobile-cta .btn{width:100%;justify-content:center}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="index.html">Markify <span>X</span></a><nav class="navlinks"><a href="index.html">Home</a><a href="#services">Marketing</a><a href="#process">Process</a><a href="#contact">Contact</a></nav><a class="btn" href="#contact">Book a Consultation</a></div></header>
+<header>
+  <nav class="nav wrap">
+    <a class="brand" href="index.html" aria-label="Markify X home">Markify <span>X</span></a>
+    <ul class="navlinks" id="navlinks">
+      <li class="has-dropdown"><a class="nav-top" href="marketing.html">Marketing <span class="chev">⌄</span></a>
+        <div class="dropdown cols2">
+          <a href="#services">Digital Marketing</a><a href="#services">SEO &amp; AI Search</a>
+          <a href="#services">eCommerce</a><a href="#services">Social Media</a>
+          <a href="#services">Branding &amp; Design</a><a href="#services">Video Editing</a>
+          <a href="#services">Email Marketing</a><a href="#services">Marketing Automation</a>
+        </div>
+      </li>
+      <li class="has-dropdown"><button class="nav-top" type="button">Development <span class="chev">⌄</span></button>
+        <div class="dropdown"><a href="index.html#svc-technology">Web Development</a><a href="index.html#svc-technology">App Development</a><a href="index.html#svc-technology">SaaS &amp; Software</a><a href="index.html#svc-commerce">eCommerce &amp; Shopify Stores</a><a href="index.html#svc-automation">Business Automation</a></div>
+      </li>
+      <li class="has-dropdown"><button class="nav-top" type="button">Case Studies <span class="chev">⌄</span></button>
+        <div class="dropdown"><a href="index.html#about">About</a><a href="index.html#case">Portfolio</a></div>
+      </li>
+      <li class="has-dropdown"><button class="nav-top" type="button">Resources <span class="chev">⌄</span></button>
+        <div class="dropdown"><a href="index.html#blog">Blogs</a><a href="index.html#needs">Analysis Tools</a></div>
+      </li>
+      <li class="mobile-cta"><a class="btn" href="#contact">Get a Free Consultation Call</a></li>
+    </ul>
+    <div class="navcta"><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button><a class="btn" href="#contact">Get a Free Consultation Call</a><button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+  </nav>
+</header>
 
 <main>
 <section class="hero"><div class="wrap">
@@ -64,4 +93,11 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(
 <section class="cta" id="contact"><div class="wrap"><span class="kicker">NEXT STEP</span><h2>Marketing Should Have a Business Reason Behind It.</h2><p>More posts are not automatically better marketing. More traffic is not automatically better marketing. More followers are not automatically better marketing.</p><p><strong>The real question: Is your marketing helping the business move forward?</strong></p><p>Whether you need one specialist service or a complete digital marketing system, Markify X can help you identify what needs to happen next and put it into action.</p><a class="btn" href="index.html#contact">Book a Free Consultation</a></div></section>
 </main>
 <footer><div class="wrap">© 2026 Markify X. All rights reserved.</div></footer>
-</body></html>
+
+<script>
+const nav=document.getElementById('navlinks'), burger=document.getElementById('burger');
+burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');burger.setAttribute('aria-expanded',open);});
+document.querySelectorAll('.nav-top').forEach(btn=>btn.addEventListener('click',e=>{if(btn.tagName==='A'&&btn.getAttribute('href')==='marketing.html'&&window.innerWidth>900)return;e.preventDefault();e.stopPropagation();const li=btn.closest('.has-dropdown'),was=li.classList.contains('open');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));if(!was)li.classList.add('open');}));
+document.addEventListener('click',e=>{if(!e.target.closest('.has-dropdown'))document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));});
+if(window.matchMedia('(hover:hover)').matches&& !window.matchMedia('(prefers-reduced-motion:reduce)').matches){document.body.classList.add('has-cursor');const dot=document.createElement('div');dot.className='cursor-dot';document.body.appendChild(dot);window.addEventListener('pointermove',e=>dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`);document.querySelectorAll('a,button,.service,.step,.points div').forEach(el=>{el.addEventListener('pointerenter',()=>dot.classList.add('big'));el.addEventListener('pointerleave',()=>dot.classList.remove('big'));});}
+</script></body></html>
