@@ -11,7 +11,12 @@
 <style>
 :root{--ink:#111;--paper:#fff;--fog:#f3f3f1;--line:rgba(17,17,17,.12);--orange:#f4620d;--slate:#57534b;--pad:clamp(18px,5vw,64px);--max:1180px;color-scheme:light}
 :root[data-theme="dark"]{--ink:#f2f0ec;--paper:#121110;--fog:#1b1918;--line:rgba(242,240,236,.14);--slate:#b0aca4;color-scheme:dark}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55}h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0}p{color:var(--slate);margin:0}.wrap{max-width:var(--max);margin:auto;padding-inline:var(--pad)}a{color:inherit}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
+.cursor-dot{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--orange);pointer-events:none;z-index:999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:difference}
+.cursor-dot.big{width:38px;height:38px;background:#fff}
+@media(hover:none),(prefers-reduced-motion:reduce){.cursor-dot{display:none}body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:auto}}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0}p{color:var(--slate);margin:0}.wrap{max-width:var(--max);margin:auto;padding-inline:var(--pad)}a{color:inherit}
 header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;min-height:72px}.brand{text-decoration:none;display:flex;align-items:center}.brand img{display:block;width:auto;height:42px}.brand span{color:var(--orange)}.navlinks{display:flex;align-items:center;gap:1.5rem;list-style:none;margin:0;padding:0;font:600 .86rem "Space Grotesk"}.navlinks a{text-decoration:none;opacity:.75}.navlinks a:hover,.navlinks a.active{color:var(--orange);opacity:1}.navcta{display:flex;align-items:center;gap:.7rem}.btn{display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--ink);background:var(--ink);color:var(--paper);padding:.8rem 1.35rem;border-radius:3px;text-decoration:none;font:600 .88rem "Space Grotesk";cursor:pointer}.btn.alt{background:var(--orange);border-color:var(--orange);color:#fff}.theme-toggle{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}.burger{display:none;background:none;border:0}.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px}
 .hero{padding:clamp(4rem,8vw,7rem) 0 6rem;overflow:hidden;position:relative;clip-path:polygon(0 0,100% 0,100% 94%,0 100%)}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 82% 10%,rgba(244,98,13,.16),transparent 65%);pointer-events:none}.hero .wrap{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:4rem;align-items:center}.eyebrow{color:var(--orange);font:700 .78rem "Space Grotesk";letter-spacing:.12em}.hero h1{font-size:clamp(3rem,6.5vw,5.8rem);max-width:12ch;margin:.8rem 0 1.2rem}.hero h1 em{font-style:normal;color:var(--orange)}.lead{font-size:1.08rem;max-width:680px}.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
 .visual{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1rem;box-shadow:0 30px 70px rgba(0,0,0,.13);transform:rotate(1deg)}.window{background:#111;color:#eee;border-radius:10px;padding:1.4rem;font:500 .78rem/1.9 ui-monospace,monospace;min-height:310px}.o{color:#ff8a3d}.m{color:#888}.f{color:#fff}.float{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:.65rem .8rem;box-shadow:0 12px 28px rgba(0,0,0,.12);font:600 .72rem "Space Grotesk"}.float b{color:var(--orange)}.f1{top:-5%;left:-7%}.f2{right:-8%;bottom:8%}
@@ -90,6 +95,23 @@ footer{background:#0a0a0a;color:#b9b4aa;padding:2.6rem 0 1.4rem;font-size:.82rem
 const root=document.documentElement,t=document.getElementById('themeToggle'),logo=document.getElementById('navLogo'),saved=localStorage.getItem('markify-theme');
 function syncLogo(){if(logo)logo.src=root.getAttribute('data-theme')==='dark'?logo.dataset.dark:logo.dataset.light;}
 if(saved)root.setAttribute('data-theme',saved);syncLogo();
+if(window.matchMedia('(hover:hover)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+document.body.classList.add('has-cursor');
+const dot=document.createElement('div'); dot.className='cursor-dot'; document.body.appendChild(dot);
+window.addEventListener('pointermove',e=>{dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;});
+document.querySelectorAll('a,button,.card,summary').forEach(el=>{
+el.addEventListener('pointerenter',()=>dot.classList.add('big'));
+el.addEventListener('pointerleave',()=>dot.classList.remove('big'));
+});
+document.querySelectorAll('.btn').forEach(btn=>{
+btn.addEventListener('pointermove',e=>{
+const r=btn.getBoundingClientRect();
+btn.style.transform=`translate(${((e.clientX-r.left-r.width/2)*.3).toFixed(1)}px,${((e.clientY-r.top-r.height/2)*.3).toFixed(1)}px`;
+});
+btn.addEventListener('pointerleave',()=>{btn.style.transform='';});
+});
+}
+
 t&&t.addEventListener('click',()=>{const n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);syncLogo();localStorage.setItem('markify-theme',n)});
 const b=document.getElementById('burger'),n=document.getElementById('navlinks');b&&b.addEventListener('click',()=>n.classList.toggle('open'));
 document.querySelectorAll('.option').forEach(x=>x.addEventListener('click',()=>{document.querySelectorAll('.option').forEach(y=>y.classList.remove('active'));x.classList.add('active');const tags=x.dataset.tags.split(',');document.getElementById('result').innerHTML='<h3>'+x.dataset.title+'</h3><p>'+x.dataset.copy+'</p><div class="tags">'+tags.map(z=>'<span>'+z+'</span>').join('')+'</div>'}));
