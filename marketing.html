@@ -55,6 +55,20 @@ footer{background:#0A0A0A;color:#B9B4AA;padding-block:2.6rem 1.4rem}
 @media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:36px}.hero-media{order:-1}.hero h1{font-size:clamp(44px,11vw,66px)}.overview-grid,.impact-head{grid-template-columns:1fr;gap:32px}.journey{grid-template-columns:1fr;gap:8px}.journey-line{display:none}.service-grid{grid-template-columns:42px 1fr}.service-visual{grid-column:1/-1;position:static;display:grid;grid-template-columns:1fr 1fr;margin-top:10px}.impact-grid{grid-template-columns:1fr 1fr}.foot-grid{grid-template-columns:1fr 1fr}.foot-grid>div:first-child{grid-column:1/-1}}
 @media(max-width:560px){.hero{padding:60px 0 72px}.hero .wrap{padding-inline:20px}.hero .lead{font-size:17px}.visual-overview,.impact{padding:64px 0}.system-card{padding:15px}.channel-pills{gap:6px}.channel-pill{font-size:11px;padding:8px 10px}.service-grid{grid-template-columns:1fr}.num{margin-bottom:-2px}.service-visual{grid-template-columns:1fr}.impact-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}.foot-grid>div:first-child{grid-column:auto}}
 
+
+/* FINAL REPAIR */
+:root{--maxw:1180px;--pad:28px}
+html,body{width:100%;overflow-x:hidden}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+header{position:sticky!important;top:0!important;z-index:50!important;width:100%!important;background:color-mix(in srgb,var(--paper) 88%,transparent)!important;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;height:auto!important;display:flex!important;align-items:center;justify-content:space-between;padding-top:14px!important;padding-bottom:14px!important}
+.brand{display:block;flex:0 0 auto;text-decoration:none!important}.brand img,#navLogo{display:block!important;width:auto!important;height:32px!important;max-width:none!important}
+.navlinks{display:flex!important;align-items:center;gap:1.6rem;list-style:none;margin:0;padding:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.88rem}
+.navlinks a{text-decoration:none}.nav-top{display:flex;align-items:center;gap:.35rem;background:none;border:0;font:inherit;font-weight:600;color:var(--ink);opacity:.75;cursor:pointer;padding:.3rem 0}.nav-top svg{display:block;width:13px;height:13px}.has-dropdown{position:relative}.dropdown{z-index:100}.navcta{display:flex;align-items:center;gap:.9rem}.theme-toggle{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:none;display:flex;align-items:center;justify-content:center}.burger{display:none;background:none;border:0}
+.hero .wrap>* ,.overview-grid>* ,.service-grid>* ,.impact-head>*{min-width:0}.hero-media,.service-visual{max-width:100%;min-width:0}.media-frame,.visual-photo,.system-card,.metric-card{max-width:100%}img{max-width:100%;height:auto}
+@media(max-width:900px){:root{--pad:20px}.navlinks{display:flex!important;position:fixed;inset:72px 0 0 0;width:100%;background:var(--paper);flex-direction:column;align-items:stretch;padding:1.5rem var(--pad);gap:.3rem;transform:translateX(100%);transition:transform .3s;overflow-y:auto;z-index:99}.navlinks.open{transform:translateX(0)}.has-dropdown{border-bottom:1px solid var(--line);padding-bottom:.6rem;margin-bottom:.6rem}.nav-top{width:100%;justify-content:space-between;padding:.6rem 0;font-size:1.05rem}.dropdown{position:static;display:none!important;opacity:1;pointer-events:auto;transform:none;box-shadow:none;border:0;background:transparent;padding:0 0 0 .8rem;min-width:0;grid-template-columns:1fr!important}.has-dropdown.open .dropdown{display:grid!important}.dropdown a{padding:.55rem 0;font-size:.95rem}.mobile-cta{display:block!important;margin-top:1rem}.navcta .btn.alt{display:none}.burger{display:block}.hero .wrap{grid-template-columns:1fr!important}.service-grid{grid-template-columns:42px 1fr}.service-visual{grid-column:1/-1;grid-row:auto}.impact-grid{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.nav{padding-top:12px!important;padding-bottom:12px!important}.navlinks{inset:64px 0 0}.brand img,#navLogo{height:28px!important}.service-grid{grid-template-columns:1fr}.service-visual{grid-template-columns:1fr}.impact-grid,.foot-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -224,20 +238,16 @@ footer{background:#0A0A0A;color:#B9B4AA;padding-block:2.6rem 1.4rem}
 
 
 <script>
-const notes={
- discover:'SEO, paid search and social content help people discover the business.',
- consider:'Useful content, brand clarity and strong pages help people understand the offer.',
- convert:'Landing pages, offers and follow-up reduce friction between interest and action.',
- retain:'Email, CRM workflows and automation keep the relationship moving after conversion.'
-};
-document.querySelectorAll('.channel-pill').forEach(btn=>btn.addEventListener('click',()=>{
-  const key=btn.dataset.channel;
-  document.querySelectorAll('.channel-pill').forEach(x=>x.classList.toggle('active',x===btn));
-  document.querySelectorAll('.journey-node').forEach(x=>x.classList.toggle('active',x.dataset.node===key));
-  const note=document.getElementById('channelNote'); if(note) note.textContent=notes[key];
-}));
-document.querySelectorAll('.journey-node').forEach(node=>node.addEventListener('click',()=>{
-  const btn=document.querySelector('.channel-pill[data-channel="'+node.dataset.node+'"]'); if(btn) btn.click();
-}));
+const root=document.documentElement,navLogo=document.getElementById('navLogo'),themeToggle=document.getElementById('themeToggle'),burger=document.getElementById('burger'),nav=document.getElementById('navlinks');
+function syncLogo(){if(navLogo){const d=root.getAttribute('data-theme')==='dark';navLogo.src=d?(navLogo.dataset.dark||navLogo.src):(navLogo.dataset.light||navLogo.src);}}
+try{if(localStorage.getItem('markify-theme')==='dark')root.setAttribute('data-theme','dark')}catch(e){} syncLogo();
+if(themeToggle)themeToggle.addEventListener('click',()=>{const d=root.getAttribute('data-theme')==='dark';root.setAttribute('data-theme',d?'light':'dark');try{localStorage.setItem('markify-theme',d?'light':'dark')}catch(e){}syncLogo()});
+if(burger&&nav)burger.addEventListener('click',()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',String(o))});
+document.querySelectorAll('.nav-top').forEach(el=>el.addEventListener('click',e=>{if(el.tagName==='A')return;e.stopPropagation();const li=el.closest('.has-dropdown');const o=li.classList.contains('open');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));if(!o)li.classList.add('open')}));
+document.addEventListener('click',e=>{if(!e.target.closest('.has-dropdown'))document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'))});
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav?.classList.remove('open')));
+const notes={discover:'SEO, paid search and social content help people discover the business.',consider:'Useful content, brand clarity and strong pages help people understand the offer.',convert:'Landing pages, offers and follow-up reduce friction between interest and action.',retain:'Email, CRM workflows and automation keep the relationship moving after conversion.'};
+document.querySelectorAll('.channel-pill').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.channel;document.querySelectorAll('.channel-pill').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.journey-node').forEach(x=>x.classList.toggle('active',x.dataset.node===k));const n=document.getElementById('channelNote');if(n)n.textContent=notes[k]||''}));
+document.querySelectorAll('.journey-node').forEach(n=>n.addEventListener('click',()=>document.querySelector('.channel-pill[data-channel="'+n.dataset.node+'"]')?.click()));
 </script>
 </body></html>
