@@ -9,18 +9,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#111;--paper:#fff;--fog:#f3f3f1;--line:rgba(17,17,17,.12);--orange:#f4620d;--slate:#57534b;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65}h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:-.025em}p{color:var(--slate)}a{color:inherit}.wrap{max-width:var(--max);margin:auto;padding:0 28px}
+:root{--ink:#111111;--paper:#FFFFFF;--fog:#F3F3F1;--line:rgba(17,17,17,.12);--orange:#F4620D;--orange-deep:#C9490A;--slate:#57534B;--max:1180px;--pad:clamp(20px,5vw,64px);color-scheme:light}
+:root[data-theme="dark"]{--ink:#F2F0EC;--paper:#121110;--fog:#1B1918;--line:rgba(242,240,236,.14);--slate:#B0ACA4;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;transition:background .3s ease,color .3s ease}h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:-.025em}p{color:var(--slate)}a{color:inherit}.wrap{max-width:var(--max);margin:auto;padding:0 28px}
 header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);z-index:10}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 25px "Space Grotesk";text-decoration:none}.brand span{color:var(--orange)}.navlinks{display:flex;gap:26px;font:600 14px "Space Grotesk"}.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--orange)}
 .btn{display:inline-flex;padding:13px 20px;background:var(--orange);color:#fff;text-decoration:none;font:600 14px "Space Grotesk";border-radius:3px}.btn.dark{background:var(--ink)}
 .hero{padding:100px 0 90px;border-bottom:1px solid var(--line);background:radial-gradient(circle at 85% 15%,rgba(244,98,13,.13),transparent 30%),var(--paper)}.eyebrow{color:var(--orange);font:700 13px "Space Grotesk";letter-spacing:.12em}.hero h1{font-size:clamp(50px,7vw,88px);max-width:850px;margin:16px 0 25px}.hero h1 em{font-style:normal;color:var(--orange)}.hero .lead{font-size:20px;max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .intro{padding:80px 0 35px}.kicker{color:var(--orange);font:700 13px "Space Grotesk";letter-spacing:.08em}.intro h2{font-size:clamp(34px,4vw,52px);max-width:720px;margin:10px 0 18px}.intro p{max-width:760px}
-.service{padding:80px 0;border-top:1px solid var(--line)}.num{font:700 18px "Space Grotesk";color:var(--orange)}.service h2{font-size:clamp(32px,4vw,48px);margin:0 0 8px}.service h3{font-size:20px;margin:0 0 14px}.service p{max-width:780px}.service ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 35px;padding:0;margin:28px 0;list-style:none;max-width:850px}.service li{border-top:1px solid var(--line);padding:12px 0;color:var(--slate)}.service li::before{content:"→";color:var(--orange);margin-right:9px}.goal{margin-top:22px;padding:18px 20px;background:var(--fog);border-left:3px solid var(--orange);max-width:850px}.goal strong{color:var(--ink)}
-.connected{padding:100px 0;background:var(--ink);color:#fff}.connected p{color:#c6c2ba;max-width:750px}.connected h2{font-size:clamp(38px,5vw,62px);max-width:850px}.connected .points{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#3b3936;margin:45px 0}.points div{background:var(--ink);padding:24px}.points b{display:block;color:#fff}.points span{color:#aaa}
-.process{padding:90px 0}.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);margin-top:40px}.step{background:var(--paper);padding:24px;min-height:210px}.step b{color:var(--orange);font:700 13px "Space Grotesk"}.step h3{margin:12px 0 8px}.step p{font-size:14px}
-.cta{padding:90px 0;background:var(--fog)}.cta h2{font-size:clamp(40px,5vw,64px);max-width:780px}.cta p{max-width:650px}.cta .btn{margin-top:20px}
+.service{padding:80px 0;border-top:1px solid var(--line)}.service-grid{display:grid;grid-template-columns:120px 1fr;gap:35px}.num{font:700 18px "Space Grotesk";color:var(--orange)}.service h2{font-size:clamp(32px,4vw,48px);margin:0 0 8px}.service h3{font-size:20px;margin:0 0 14px}.service p{max-width:780px}.service ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 35px;padding:0;margin:28px 0;list-style:none;max-width:850px}.service li{border-top:1px solid var(--line);padding:12px 0;color:var(--slate)}.service li::before{content:"→";color:var(--orange);margin-right:9px}.goal{margin-top:22px;padding:18px 20px;background:var(--fog);border-left:3px solid var(--orange);max-width:850px}.goal strong{color:var(--ink)}
+.connected{padding:100px 0;background:var(--ink);color:var(--paper)}.connected p{color:#c6c2ba;max-width:750px}.connected h2{font-size:clamp(38px,5vw,62px);max-width:850px}.connected .points{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#3b3936;margin:45px 0}.points div{background:var(--ink);padding:24px}.points b{display:block;color:#fff}.points span{color:#aaa}
+.process{padding:90px 0;background:var(--paper)}.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);margin-top:40px}.step{background:var(--paper);padding:24px;min-height:210px}.step b{color:var(--orange);font:700 13px "Space Grotesk"}.step h3{margin:12px 0 8px}.step p{font-size:14px}
+.cta{padding:90px 0;background:var(--fog);color:var(--ink)}.cta h2{font-size:clamp(40px,5vw,64px);max-width:780px}.cta p{max-width:650px}.cta .btn{margin-top:20px}
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:13px;color:var(--slate)}
-@media(max-width:800px){.navlinks{display:none}.hero{padding:70px 0}.service ul{grid-template-columns:1fr}.points,.process-grid{grid-template-columns:1fr}.connected,.process,.cta{padding:70px 0}}
+@media(max-width:800px){.navlinks{display:none}.hero{padding:70px 0}.service-grid{grid-template-columns:1fr;gap:10px}.service ul{grid-template-columns:1fr}.points,.process-grid{grid-template-columns:1fr}.connected,.process,.cta{padding:70px 0}}
 
 /* Marketing page visual system */
 .hero{padding:82px 0 96px;background:radial-gradient(circle at 78% 18%,rgba(244,98,13,.13),transparent 34%),var(--paper)}
@@ -70,6 +71,7 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .journey-stage{margin-top:18px;padding:16px 18px;background:var(--ink);border-radius:10px;color:#fff}
 .journey-stage span{font:700 10px "Space Grotesk";color:var(--orange);letter-spacing:.08em}
 .journey-stage p{margin:6px 0 0;color:#d2cec7;font-size:13px}
+.service-grid{display:grid;grid-template-columns:72px minmax(0,1fr)!important;gap:34px;align-items:start;max-width:1000px}
 .service-grid>div:nth-child(2){min-width:0}
 .service-visual,.visual-photo,.metric-card,.mini-chart,.hero-media{display:none!important}
 .contact{background:linear-gradient(135deg,#F4620D 0%,#FF8A3D 100%);color:#fff;clip-path:polygon(0 4%,100% 0,100% 100%,0 100%)}
@@ -107,7 +109,7 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper
 .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0}
 @media(max-width:900px){
  .full-picture-grid{grid-template-columns:1fr;gap:34px}.journey-steps{grid-template-columns:1fr 1fr}.journey-arrow{display:none}
- .service ul{grid-template-columns:1fr}
+ .service-grid{grid-template-columns:42px 1fr!important}.service ul{grid-template-columns:1fr}
  .navlinks{position:fixed;inset:60px 0 0 0;background:var(--paper);flex-direction:column;padding:2rem var(--pad);gap:.3rem;font-size:1.05rem;transform:translateX(100%);transition:transform .3s;overflow-y:auto}
  .navlinks.open{transform:translateX(0)}.has-dropdown{border-bottom:1px solid var(--line);padding-bottom:.6rem;margin-bottom:.6rem}
  .nav-top{width:100%;justify-content:space-between;padding:.6rem 0;font-size:1.05rem}
@@ -117,7 +119,7 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper
  .contact-grid{grid-template-columns:1fr}
 }
 @media(max-width:560px){
- .full-picture{padding:64px 0}.journey-steps{grid-template-columns:1fr}.journey-system{padding:16px}
+ .full-picture{padding:64px 0}.journey-steps{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr!important}.journey-system{padding:16px}
  .row2{grid-template-columns:1fr}.nav{padding-block:12px}.brand img{height:28px}
  .navlinks{inset:64px 0 0}.impact-grid,.foot-grid{grid-template-columns:1fr}
 }
@@ -135,9 +137,9 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .problem-section .section-head h2{font-size:clamp(38px,5vw,64px);margin:8px 0 14px}
 .problem-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;max-width:1080px}
 .problem-checklist{display:grid;gap:10px}
-.problem-option{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:var(--fog);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:17px 18px;font:600 14px "Space Grotesk",sans-serif;cursor:pointer;transition:transform .16s,border-color .16s,background .16s}
-.problem-option:hover{transform:translateX(4px);border-color:var(--orange)}
-.problem-option.active{border-color:var(--orange);background:var(--paper);box-shadow:0 10px 28px rgba(17,17,17,.07)}
+.problem-option{width:100%;display:flex;opacity:.52;align-items:center;gap:14px;text-align:left;background:var(--fog);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:17px 18px;font:600 14px "Space Grotesk",sans-serif;cursor:pointer;transition:transform .16s,border-color .16s,background .16s}
+.problem-option:hover{transform:translateX(4px);border-color:var(--orange);opacity:.8}
+.problem-option.active{border-color:var(--orange);background:var(--paper);opacity:1;box-shadow:0 10px 28px rgba(17,17,17,.07)}
 .check-box{width:22px;height:22px;border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;flex:0 0 22px;color:transparent;font-size:12px}
 .problem-option.active .check-box{background:var(--orange);border-color:var(--orange);color:#fff}
 .problem-result{min-height:285px;padding:36px;background:var(--ink);color:#fff;border-radius:12px;position:relative;overflow:hidden}
@@ -148,11 +150,12 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .problem-result strong{color:#fff}
 .problem-note{margin-top:30px;max-width:850px;color:var(--slate);font-size:.9rem}
 .service{padding:88px 0;border-top:1px solid var(--line)}
+.service-grid{display:grid;grid-template-columns:72px minmax(0,1fr)!important;gap:34px;align-items:start;max-width:1000px;margin:0 auto}
 .service-grid>div:nth-child(2){min-width:0}
 .service h2,.service h3{margin-top:0}
 .service ul{max-width:900px}
-@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.problem-result{min-height:0}}
-@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}}
+@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:42px 1fr!important}.problem-result{min-height:0}}
+@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}.service-grid{grid-template-columns:1fr!important}}
 
 .problem-section{padding:96px 0;background:var(--paper);border-top:1px solid var(--line)}
 .problem-section .section-head{max-width:760px;margin-bottom:42px}.problem-section .section-head h2{font-size:clamp(38px,5vw,64px);margin:8px 0 14px}
@@ -161,41 +164,10 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
 .problem-option:hover{transform:translateX(4px);border-color:var(--orange)}.problem-option.active{border-color:var(--orange);background:var(--paper);box-shadow:0 10px 28px rgba(17,17,17,.07)}
 .check-box{width:22px;height:22px;border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;flex:0 0 22px;color:transparent;font-size:12px}.problem-option.active .check-box{background:var(--orange);border-color:var(--orange);color:#fff}
 .problem-result{min-height:285px;padding:36px;background:var(--ink);color:#fff;border-radius:12px;position:relative;overflow:hidden}.problem-result-number{font:700 12px "Space Grotesk";color:var(--orange);letter-spacing:.08em}.problem-result h3{font-size:clamp(28px,3.2vw,44px);margin:12px 0 24px;color:#fff}.problem-result p{color:#d9d4cd;max-width:640px}.problem-result strong{color:#fff}.problem-note{margin:30px auto 0;max-width:1080px;color:var(--slate);font-size:.9rem}
+.service-grid{grid-template-columns:72px minmax(0,1fr)!important;max-width:1000px;margin:0 auto!important}
 .contact{background:linear-gradient(135deg,#F4620D 0%,#FF8A3D 100%);color:#fff}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.6rem;align-items:start}.contact h2{color:#fff}.contact p{color:rgba(255,255,255,.88)}.contact .eyebrow{color:#3A1400}.contact ul.hint{list-style:none;margin-top:1.2rem;display:grid;gap:.4rem}.contact ul.hint li{color:rgba(255,255,255,.85);font-size:.86rem}.row2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}input,textarea,select{background:var(--fog);border:1px solid var(--line);color:var(--ink);padding:.8rem 1rem;border-radius:6px;font-family:inherit;font-size:.9rem;width:100%}
-@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.contact-grid{grid-template-columns:1fr}}
-@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}.row2{grid-template-columns:1fr}}
-
-/* Marketing service alignment */
-.service-grid{max-width:1000px!important;margin:0 auto!important;display:grid!important;grid-template-columns:72px minmax(0,1fr)!important;gap:18px!important}
-.service-grid .svc-card{text-align:left!important}
-.service-grid .svc-card-head{justify-content:flex-start!important;text-align:left!important}
-.service-grid .svc-card-head h3{text-align:left!important}
-@media(max-width:900px){.service-grid{grid-template-columns:42px minmax(0,1fr)!important}}
-@media(max-width:560px){.service-grid{grid-template-columns:1fr!important}}
-
-.problem-option{opacity:.48;filter:grayscale(.35);background:var(--fog);color:var(--ink)}
-.problem-option.active{opacity:1;filter:none;background:var(--paper);border-color:var(--orange);color:var(--ink);box-shadow:0 10px 28px rgba(17,17,17,.08)}
-.problem-option.active .check-box{background:var(--orange);border-color:var(--orange);color:#fff}
-.problem-option:hover{opacity:.82;filter:none}
-.problem-option.active:hover{opacity:1}
-
-/* SHARED MARKIFY UI — intentionally matched to homepage */
-:root{--ink:#111111;--paper:#FFFFFF;--fog:#F3F3F1;--line:rgba(17,17,17,.12);--orange:#F4620D;--orange-deep:#C9490A;--slate:#57534B;--maxw:1180px;--pad:clamp(20px,5vw,64px);color-scheme:light}
-:root[data-theme="dark"]{--ink:#F2F0EC;--paper:#121110;--fog:#1B1918;--line:rgba(242,240,236,.14);--slate:#B0ACA4;color-scheme:dark}
-html{scroll-padding-top:88px}body{background:var(--paper)!important;color:var(--ink)!important;font-family:'Inter',system-ui,sans-serif!important;transition:background .3s ease,color .3s ease}
-.wrap{max-width:var(--maxw)!important;padding-inline:var(--pad)!important}
-body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none!important}.cursor-dot{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--orange);pointer-events:none;z-index:999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:difference}.cursor-dot.big{width:38px;height:38px;background:#fff}
-@media(hover:none),(prefers-reduced-motion:reduce){.cursor-dot{display:none}body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:auto!important}}
-h1,h2,h3,.disp{font-family:'Space Grotesk',system-ui,sans-serif!important;color:var(--ink)}p{color:var(--slate)}
-.btn{position:relative;display:inline-flex;align-items:center;gap:.5rem;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.92rem;padding:.85rem 1.5rem;border-radius:3px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none;transition:transform .12s ease}.btn:hover{transform:translateY(-2px)}.btn.alt{background:var(--orange);border-color:var(--orange);color:#fff}.btn.ghost{background:transparent;color:var(--ink)}
-.theme-toggle{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink)}.theme-toggle svg{width:18px;height:18px}:root[data-theme="dark"] .theme-toggle .i-sun{display:block}:root[data-theme="dark"] .theme-toggle .i-moon{display:none}.theme-toggle .i-sun{display:none}
-header{position:sticky!important;top:0!important;z-index:50!important;background:color-mix(in srgb,var(--paper) 88%,transparent)!important;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)!important}.nav{display:flex;align-items:center;justify-content:space-between;padding-block:14px!important}.brand img{height:32px}.navlinks{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.88rem}.navlinks a{text-decoration:none;opacity:.75}.navlinks a:hover,.navlinks a.active{opacity:1;color:var(--orange)}.nav-top{display:flex;align-items:center;gap:.35rem;background:none;border:none;font:inherit;font-weight:600;color:var(--ink);opacity:.75;cursor:pointer;padding:.3rem 0}.nav-top:hover{opacity:1}.dropdown{background:var(--paper);border-color:var(--line)}.dropdown a{color:var(--slate)}.dropdown a:hover{background:var(--fog);color:var(--ink)}.burger span{background:var(--ink)}
-/* Problem checklist */
-.problem-section{padding:96px 0;background:var(--paper);border-top:1px solid var(--line)}.problem-section .section-head{max-width:760px;margin-bottom:42px}.problem-section .section-head h2{font-size:clamp(38px,5vw,64px);margin:8px 0 14px}.problem-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;max-width:1080px;margin:0 auto}.problem-checklist{display:grid;gap:10px}.problem-option{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:var(--fog);border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:17px 18px;font:600 14px 'Space Grotesk',sans-serif;cursor:pointer;transition:transform .16s,border-color .16s,background .16s,opacity .16s;opacity:.48;filter:grayscale(.35)}.problem-option:hover{transform:translateX(4px);border-color:var(--orange);opacity:.82;filter:none}.problem-option.active{border-color:var(--orange);background:var(--paper);color:var(--ink);opacity:1;filter:none;box-shadow:0 10px 28px rgba(17,17,17,.08)}.check-box{width:22px;height:22px;border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;flex:0 0 22px;color:transparent;font-size:12px}.problem-option.active .check-box{background:var(--orange);border-color:var(--orange);color:#fff}.problem-result{min-height:285px;padding:36px;background:var(--ink);color:var(--paper);border-radius:12px;position:relative;overflow:hidden}.problem-result-number{font:700 12px 'Space Grotesk';color:var(--orange);letter-spacing:.08em}.problem-result h3{font-size:clamp(28px,3.2vw,44px);margin:12px 0 24px;color:var(--paper)!important}.problem-result p{color:var(--slate);max-width:640px}.problem-result strong{color:var(--paper)}.problem-note{margin:30px auto 0;max-width:1080px;color:var(--slate);font-size:.9rem}
-/* Dark-mode readability for Marketing-specific blocks */
-:root[data-theme="dark"] .hero,.hero{background-color:var(--paper)}.hero,.intro,.service,.process,.step,.cta{color:var(--ink)}.service li{color:var(--slate)}.goal{background:var(--fog)}.goal strong{color:var(--ink)}.connected{background:var(--ink);color:var(--paper)}.connected p{color:var(--slate)}.connected .points{background:var(--line)}.connected .points div{background:var(--ink)}.connected .points b{color:var(--paper)}.connected .points span{color:var(--slate)}.step{background:var(--paper)}.cta{background:var(--fog)}.cta h2,.cta p{color:var(--ink)}
-@media(max-width:900px){.navlinks{position:fixed;inset:60px 0 0 0;background:var(--paper);flex-direction:column;padding:2rem var(--pad);gap:.3rem;font-size:1.05rem;transform:translateX(100%);transition:transform .3s;overflow-y:auto}.navlinks.open{transform:translateX(0)}.has-dropdown{border-bottom:1px solid var(--line);padding-bottom:.6rem;margin-bottom:.6rem}.nav-top{width:100%;justify-content:space-between;padding:.6rem 0;font-size:1.05rem}.dropdown{position:static;opacity:1;pointer-events:auto;transform:none;box-shadow:none;border:none;background:transparent;padding:0 0 0 .8rem;min-width:0;grid-template-columns:1fr!important;display:none}.has-dropdown.open .dropdown{display:grid}.dropdown a{padding:.55rem 0;font-size:.95rem}.mobile-cta{display:block;margin-top:1rem}.burger{display:block}.navcta .btn.alt{display:none}.problem-layout{grid-template-columns:1fr;gap:30px}}
-@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}.row2{grid-template-columns:1fr}}
+@media(max-width:900px){.problem-layout{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:42px 1fr!important}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.problem-section{padding:64px 0}.problem-result{padding:26px}.service-grid{grid-template-columns:1fr!important}.row2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -254,15 +226,30 @@ header{position:sticky!important;top:0!important;z-index:50!important;background
 </header>
 
 
-<main><section class="problem-section" id="problem">
+<main>
+<section class="hero"><div class="wrap">
+<h1>Marketing That <em>Moves the Business Forward</em></h1>
+<p class="lead">At <strong>Markify X</strong>, we build marketing systems around how your business actually works. That can mean improving your visibility in Google and AI search, generating leads through paid and organic channels, building a stronger brand, growing an eCommerce store, or automating the repetitive work behind your marketing.</p>
+<p class="lead">We look at the whole picture — your audience, offer, website, content, channels, and conversion journey — then build the pieces that matter.</p>
+<div class="actions"><a class="btn" href="#contact">Book a Free Consultation</a><a class="btn dark" href="#services">Explore Marketing Services</a></div>
+<div class="hero-media aria-label="Marketing performance visual">
+  <div class="media-frame">
+    <img src="" alt="Marketing analytics dashboard on a laptop" loading="eager">
+    <div class="media-badge"><span class="live-dot"></span> Strategy + performance</div>
+    <div class="media-card"><b>Marketing system</b><span>Search · Content · Social · Email</span></div>
+  </div>
+</div>
+</div></section>
+
+<section class="problem-section" id="problem">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">WHAT'S THE PROBLEM?</p>
       <h2>Not every business needs more marketing.</h2>
-      <p>Sometimes the problem is visibility. Sometimes it is conversion, follow-up, retention or a lack of direction. Choose the situation that sounds closest to your business.</p>
+      <p>Sometimes, you need to fix what is stopping your marketing from working. Tell us what you're struggling with.</p>
     </div>
     <div class="problem-layout">
-      <div class="problem-checklist" role="list">
+      <div class="problem-checklist">
         <button class="problem-option active" type="button" data-problem="1"><span class="check-box">✓</span><span>Nobody finds us</span></button>
         <button class="problem-option" type="button" data-problem="2"><span class="check-box">✓</span><span>People find us, but don't enquire</span></button>
         <button class="problem-option" type="button" data-problem="3"><span class="check-box">✓</span><span>We get enquiries, but lose them</span></button>
@@ -270,18 +257,33 @@ header{position:sticky!important;top:0!important;z-index:50!important;background
         <button class="problem-option" type="button" data-problem="5"><span class="check-box">✓</span><span>Our marketing is all over the place</span></button>
         <button class="problem-option" type="button" data-problem="6"><span class="check-box">✓</span><span>We're launching something new</span></button>
       </div>
-      <div class="problem-result" id="problemResult" aria-live="polite">
+      <div class="problem-result" id="problemResult">
         <div class="problem-result-number">01</div>
         <h3>Nobody finds us</h3>
         <p><strong>Focus on:</strong> SEO · AI Search · Local SEO · Content</p>
         <p><strong>Goal:</strong> Improve visibility and help the right customers discover your business.</p>
       </div>
     </div>
-    <p class="problem-note">No one-size-fits-all package. Select a problem and use it as a starting point for the areas that may need attention.</p>
+    <p class="problem-note">No complicated marketing jargon. No one-size-fits-all package. Just a clearer view of what may be holding your business back and which areas could make the biggest difference.</p>
   </div>
 </section>
 
+<section class="service"><div class="service-grid"><div class="num">01</div><div><h2>Digital Marketing</h2><h3>Turn attention into measurable business opportunities.</h3><p>Your customers are already searching, comparing, scrolling, and researching online. The challenge is reaching them at the right moment and giving them a clear reason to choose you.</p><p>We create and manage digital marketing campaigns around your actual business goals — whether that means more qualified leads, enquiries, bookings, sales, or brand visibility.</p><ul><li>Digital marketing strategy</li><li>Campaign planning and management</li><li>Lead generation campaigns</li><li>Conversion-focused landing pages</li><li>Paid search and paid social campaigns</li><li>Audience research</li><li>Content strategy</li><li>Conversion rate optimisation</li><li>Marketing analytics and reporting</li><li>Campaign performance improvement</li></ul><div class="goal"><strong>The goal:</strong> Less random marketing activity. More measurable opportunities.</div></div></section>
 
+<section class="service"><div class="service-grid"><div class="num">02</div><div><h2>SEO &amp; AI Search</h2><h3>Get discovered where your customers are looking.</h3><p>Search is changing. People still use Google, but they are also asking ChatGPT, Google AI Overviews, Gemini, Perplexity, and other AI-powered systems for recommendations and answers.</p><p>We combine technical SEO, content, local search, authority building, and AI-search optimisation to improve how your business is found and understood.</p><ul><li>Technical SEO</li><li>On-page SEO</li><li>Local SEO</li><li>Keyword and search-intent research</li><li>Content strategy</li><li>Internal linking</li><li>Structured data</li><li>Google Business Profile optimisation</li><li>AI search optimisation</li><li>AEO / answer engine optimisation</li><li>GEO / generative engine optimisation</li><li>SEO audits</li><li>Search performance reporting</li></ul><div class="goal"><strong>The goal:</strong> Build sustainable search visibility that can bring the right people to your business.</div></div></section>
+
+<section class="service"><div class="service-grid"><div class="num">03</div><div><h2>eCommerce Marketing</h2><h3>More than traffic. More customers and more revenue.</h3><p>Getting people to an online store is only part of the job. We work across your store and marketing channels to create a better path from discovery to purchase.</p><ul><li>eCommerce SEO</li><li>Shopify marketing</li><li>WooCommerce marketing</li><li>Product page optimisation</li><li>Category page optimisation</li><li>Product-feed strategy</li><li>Conversion optimisation</li><li>Content and merchandising</li><li>Email campaigns</li><li>Retention marketing</li><li>Social media campaigns</li><li>Performance marketing</li><li>Analytics and revenue tracking</li></ul><div class="goal"><strong>The goal:</strong> Turn your online store into a stronger acquisition and revenue channel.</div></div></section>
+
+<section class="service"><div class="service-grid"><div class="num">04</div><div><h2>Social Media</h2><h3>Give your brand something worth following.</h3><p>Social media should not become a weekly exercise in posting whatever happens to be on the content calendar. Your content should have a purpose.</p><ul><li>Social media strategy</li><li>Content planning</li><li>Social media management</li><li>Post and carousel design</li><li>Short-form content</li><li>Community engagement</li><li>Content calendars</li><li>Platform-specific campaigns</li><li>Social advertising</li><li>Performance reporting</li></ul><div class="goal"><strong>The goal:</strong> Build recognition, engagement, and a stronger relationship with your audience.</div></div></section>
+
+<section class="service"><div class="service-grid"><div class="num">05</div><div><h2>Branding &amp; Design</h2><h3>Make your business look like the business you want to become.</h3><p>Your logo matters, but branding goes much further than a logo. We help businesses create brands that are clear, credible, and consistent across digital touchpoints.</p><ul><li>Brand identity</li><li>Logo design</li><li>Brand guidelines</li><li>Visual systems</li><li>Marketing materials</li><li>Social media design</li><li>Website visual direction</li><li>Presentation design</li><li>Ad creatives</li><li>Campaign graphics</li><li>UI / visual design</li></ul><div class="goal"><strong>The goal:</strong> Make your business easier to recognise, understand, and remember.</div></div></section>
+
+<section class="service"><div class="service-grid"><div class="num">06</div><div><h2>Video Editing</h2><h3>Turn raw footage into content people want to watch.</h3><p>We edit videos for businesses that need content for websites, social platforms, advertising, campaigns, presentations, and other digital channels.</p><ul><li>Short-form video editing</li><li>Reels and Shorts</li><li>Social media videos</li><li>Promotional videos</li><li>Video ads</li><li>YouTube editing</li><li>Motion graphics</li><li>Captions and subtitles</li><li>Product videos</li><li>Business presentations</li><li>Repurposing long-form content</li></ul><div class="goal"><strong>The goal:</strong> Create video content that communicates quickly and gives your audience a reason to keep watching.</div></div></section>
+
+<section class="service"><div class="service-grid"><div class="num">07</div><div><h2>Email Marketing</h2><h3>Stay connected after the first click.</h3><p>Email gives businesses a direct way to educate prospects, follow up, promote products, bring previous customers back, and build long-term relationships.</p><ul><li>Email marketing strategy</li><li>Newsletter campaigns</li><li>Lead-nurturing sequences</li><li>Welcome emails</li><li>Promotional campaigns</li><li>Customer retention campaigns</li><li>Abandoned-cart emails</li><li>Segmentation</li><li>Email copywriting</li><li>Campaign design</li><li>Performance tracking</li></ul><div class="goal"><strong>The goal:</strong> Turn your existing audience and customer base into a stronger long-term marketing asset.</div></div></section>
+
+<section class="service"><div class="service-grid"><div class="num">08</div><div><h2>Marketing Automation</h2><h3>Let your marketing system handle the repetitive work.</h3><p>We help businesses connect their marketing processes so routine work happens automatically while your team focuses on higher-value work.</p><ul><li>Lead capture automation</li><li>Email automation</li><li>Lead nurturing</li><li>CRM workflows</li><li>Customer follow-ups</li><li>Form-to-email workflows</li><li>Marketing integrations</li><li>Reporting automation</li><li>Customer segmentation</li><li>Campaign triggers</li><li>Workflow optimisation</li></ul><div class="goal"><strong>The goal:</strong> A marketing operation that keeps working even when your team is focused elsewhere.</div></div></section>
+</div>
 
 
 <section class="connected"><div class="wrap"><span class="kicker">ONE BUSINESS. ONE SYSTEM.</span><h2>One Business. One Connected Marketing System.</h2><p>You do not necessarily need all eight services. Sometimes the problem is SEO. Sometimes it is conversion. Sometimes the brand is unclear. Sometimes you are generating leads but losing them during follow-up.</p><div class="points"><div><b>SEO</b><span>Can bring the visitor.</span></div><div><b>Content</b><span>Can build trust.</span></div><div><b>Design</b><span>Can strengthen the brand.</span></div><div><b>Social</b><span>Can create awareness.</span></div><div><b>Email</b><span>Can bring people back.</span></div><div><b>Automation</b><span>Can keep the process moving.</span></div></div><p>We connect the pieces that make sense for your business.</p></div></section>
@@ -290,41 +292,31 @@ header{position:sticky!important;top:0!important;z-index:50!important;background
 <div class="step"><b>01</b><h3>Understand</h3><p>We start with your business, audience, current marketing, competitors, and objectives.</p></div><div class="step"><b>02</b><h3>Find the Gaps</h3><p>We identify what is working, what is being missed, and where your marketing is losing potential customers.</p></div><div class="step"><b>03</b><h3>Build the Strategy</h3><p>We create a practical plan based on your priorities, resources, market, and growth targets.</p></div><div class="step"><b>04</b><h3>Execute</h3><p>Our team handles the strategy, creative, campaigns, optimisation, and technical work required to put the plan into action.</p></div><div class="step"><b>05</b><h3>Measure & Improve</h3><p>We track meaningful performance data, learn from the results, and continuously improve the system.</p></div>
 </div></div></section>
 
-
+<section id="contact" class="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow">NEXT STEP</p>
+        <h2>Tell us what you're trying to solve.</h2>
+        <p style="margin-top:.8rem">You don't need to choose a service, understand the technology, or prepare a perfect brief.</p>
+        <ul class="hint">
+          <li>✓ No package required — start with the problem.</li>
+          <li>✓ We identify the gaps and recommend the right mix.</li>
+          <li>✓ You only invest in what makes sense for your situation.</li>
+        </ul>
+      </div>
+      <form id="quoteForm" novalidate>
+        <div class="row2">
+          <div><label class="fl">Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div><label class="fl">Email</label><input type="email" name="email" placeholder="you@company.com" required></div>
+        </div>
+        <div><label class="fl">Website</label><input type="url" name="website" placeholder="https://"></div>
+        <div><label class="fl">What's your biggest challenge right now?</label><textarea name="challenge" rows="3" placeholder="What's stopping you from reaching your goal?"></textarea></div>
+        <button class="btn alt" type="submit">Book My Consultation →</button>
+        <p class="form-msg" id="formMsg" role="status">Not sure where to start? Just tell us the problem.</p>
+      </form>
+    </div>
+  </section>
 </main>
-
-
-
-
-
-<script>
-(function(){
-const root=document.documentElement,logo=document.getElementById('navLogo'),toggle=document.getElementById('themeToggle');
-function syncLogo(){if(!logo)return;logo.src=root.getAttribute('data-theme')==='dark'?logo.dataset.dark:logo.dataset.light}
-try{root.setAttribute('data-theme',localStorage.getItem('markify-theme')==='dark'?'dark':'light')}catch(e){root.setAttribute('data-theme','light')}
-syncLogo();
-if(toggle)toggle.addEventListener('click',function(){const dark=root.getAttribute('data-theme')==='dark';root.setAttribute('data-theme',dark?'light':'dark');try{localStorage.setItem('markify-theme',dark?'light':'dark')}catch(e){}syncLogo()});
-if(window.matchMedia('(hover:hover)').matches&&!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
-document.body.classList.add('has-cursor');const dot=document.createElement('div');dot.className='cursor-dot';document.body.appendChild(dot);
-window.addEventListener('pointermove',e=>dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px) translate(-50%,-50%)');
-document.querySelectorAll('a,button,.card,summary').forEach(el=>{el.addEventListener('pointerenter',()=>dot.classList.add('big'));el.addEventListener('pointerleave',()=>dot.classList.remove('big'))});
-document.querySelectorAll('.btn').forEach(btn=>{btn.addEventListener('pointermove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+((e.clientX-r.left-r.width/2)*.3).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px)'});btn.addEventListener('pointerleave',()=>btn.style.transform='')});
-}
-const burger=document.getElementById('burger'),nav=document.getElementById('navlinks');
-if(burger&&nav){burger.addEventListener('click',()=>{const open=nav.classList.toggle('open');burger.setAttribute('aria-expanded',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');burger.setAttribute('aria-expanded','false');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'))}))}
-document.querySelectorAll('.nav-top').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();const li=btn.closest('.has-dropdown');if(!li)return;const was=li.classList.contains('open');document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));if(!was)li.classList.add('open')}));
-document.addEventListener('click',e=>{if(!e.target.closest('.has-dropdown'))document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'))});
-const data={
-1:{title:'Nobody finds us',focus:'SEO · AI Search · Local SEO · Content',goal:'Improve visibility and help the right customers discover your business.'},
-2:{title:"People find us, but don't enquire",focus:'Website · UX · Conversion Optimization · Branding',goal:'Turn existing attention and website visits into more enquiries.'},
-3:{title:'We get enquiries, but lose them',focus:'CRM · Email Marketing · Automation · Lead Management',goal:'Respond faster, follow up consistently, and reduce lost opportunities.'},
-4:{title:"Customers don't return",focus:'Email Marketing · Automation · Content · Customer Retention',goal:'Build stronger relationships and give existing customers reasons to come back.'},
-5:{title:'Our marketing is all over the place',focus:'Strategy · Branding · Digital Marketing · Analytics · Automation',goal:'Connect your channels into one clear marketing system.'},
-6:{title:"We're launching something new",focus:'Strategy · Branding · Website · Content · SEO · Launch Marketing',goal:'Build the right foundation, create awareness, and give your launch a clear path to market.'}};
-const result=document.getElementById('problemResult');
-document.querySelectorAll('.problem-option').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.problem-option').forEach(x=>x.classList.remove('active'));btn.classList.add('active');const d=data[btn.dataset.problem];if(!d||!result)return;result.querySelector('.problem-result-number').textContent=String(btn.dataset.problem).padStart(2,'0');result.querySelector('h3').textContent=d.title;const p=result.querySelectorAll('p');p[0].innerHTML='<strong>Focus on:</strong> '+d.focus;p[1].innerHTML='<strong>Goal:</strong> '+d.goal}));
-})();
-</script>
 <footer>
   <div class="wrap foot-grid">
     <div>
@@ -339,5 +331,85 @@ document.querySelectorAll('.problem-option').forEach(btn=>btn.addEventListener('
     <div class="socials" aria-label="Social media links"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Twitter">x</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Pinterest">p</a></div>
   </div>
 </footer>
+
+<script>
+(function(){
+  const root=document.documentElement;
+  const logo=document.getElementById('navLogo');
+  const toggle=document.getElementById('themeToggle');
+  function syncLogo(){
+    if(logo) logo.src=root.getAttribute('data-theme')==='dark'?logo.dataset.dark:logo.dataset.light;
+  }
+  try{root.setAttribute('data-theme',localStorage.getItem('markify-theme')==='dark'?'dark':'light')}catch(e){root.setAttribute('data-theme','light')}
+  syncLogo();
+  if(toggle) toggle.addEventListener('click',function(){
+    const dark=root.getAttribute('data-theme')==='dark';
+    root.setAttribute('data-theme',dark?'light':'dark');
+    try{localStorage.setItem('markify-theme',dark?'light':'dark')}catch(e){}
+    syncLogo();
+  });
+
+  if(window.matchMedia('(hover:hover)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.body.classList.add('has-cursor');
+    const dot=document.createElement('div'); dot.className='cursor-dot'; document.body.appendChild(dot);
+    window.addEventListener('pointermove',e=>{dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;});
+    document.querySelectorAll('a,button,.card,summary').forEach(el=>{
+      el.addEventListener('pointerenter',()=>dot.classList.add('big'));
+      el.addEventListener('pointerleave',()=>dot.classList.remove('big'));
+    });
+    document.querySelectorAll('.btn').forEach(btn=>{
+      btn.addEventListener('pointermove',e=>{
+        const r=btn.getBoundingClientRect();
+        btn.style.transform=`translate(${((e.clientX-r.left-r.width/2)*.3).toFixed(1)}px,${((e.clientY-r.top-r.height/2)*.3).toFixed(1)}px)`;
+      });
+      btn.addEventListener('pointerleave',()=>{btn.style.transform='';});
+    });
+  }
+
+  const burger=document.getElementById('burger'),nav=document.getElementById('navlinks');
+  if(burger&&nav){
+    burger.addEventListener('click',()=>{
+      const open=nav.classList.toggle('open');
+      burger.setAttribute('aria-expanded',open);
+    });
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));
+    }));
+  }
+  document.querySelectorAll('.nav-top').forEach(btn=>btn.addEventListener('click',e=>{
+    e.stopPropagation();
+    const li=btn.closest('.has-dropdown'); if(!li)return;
+    const was=li.classList.contains('open');
+    document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));
+    if(!was)li.classList.add('open');
+  }));
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.has-dropdown'))document.querySelectorAll('.has-dropdown.open').forEach(x=>x.classList.remove('open'));
+  });
+
+  const data={
+    1:{title:'Nobody finds us',focus:'SEO · AI Search · Local SEO · Content',goal:'Improve visibility and help the right customers discover your business.'},
+    2:{title:"People find us, but don't enquire",focus:'Website · UX · Conversion Optimization · Branding',goal:'Turn existing attention and website visits into more enquiries.'},
+    3:{title:'We get enquiries, but lose them',focus:'CRM · Email Marketing · Automation · Lead Management',goal:'Respond faster, follow up consistently, and reduce lost opportunities.'},
+    4:{title:"Customers don't return",focus:'Email Marketing · Automation · Content · Customer Retention',goal:'Build stronger relationships and give existing customers reasons to come back.'},
+    5:{title:'Our marketing is all over the place',focus:'Strategy · Branding · Digital Marketing · Analytics · Automation',goal:'Connect your channels into one clear marketing system.'},
+    6:{title:"We're launching something new",focus:'Strategy · Branding · Website · Content · SEO · Launch Marketing',goal:'Build the right foundation, create awareness, and give your launch a clear path to market.'}
+  };
+  const result=document.getElementById('problemResult');
+  document.querySelectorAll('.problem-option').forEach(btn=>btn.addEventListener('click',()=>{
+    document.querySelectorAll('.problem-option').forEach(x=>x.classList.remove('active'));
+    btn.classList.add('active');
+    const d=data[btn.dataset.problem];
+    if(!d||!result)return;
+    result.querySelector('.problem-result-number').textContent=String(btn.dataset.problem).padStart(2,'0');
+    result.querySelector('h3').textContent=d.title;
+    const p=result.querySelectorAll('p');
+    p[0].innerHTML='<strong>Focus on:</strong> '+d.focus;
+    p[1].innerHTML='<strong>Goal:</strong> '+d.goal;
+  }));
+})();
+</script>
 </body>
 </html>
