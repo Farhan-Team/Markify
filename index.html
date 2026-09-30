@@ -580,23 +580,23 @@ document.getElementById('themeToggle').addEventListener('click',()=>{
   syncLogo();
 });
 
-// tech logo strip (original glyphs, not brand marks)
+// technology logo strip
 const techs=[
-  ['Google','<circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/>'],
-  ['GA4','<path d="M4 20V10M12 20V4M20 20v-7"/>'],
-  ['Search Console','<circle cx="10" cy="10" r="6"/><path d="M21 21l-5-5"/>'],
-  ['Google Ads','<path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 8v8"/>'],
-  ['Meta','<circle cx="8" cy="12" r="5"/><circle cx="16" cy="12" r="5"/>'],
-  ['TikTok','<path d="M9 18a4 4 0 104-4V4h3a4 4 0 004 4"/>'],
-  ['Shopify','<path d="M6 8l1-4h10l1 4"/><path d="M5 8h14l1 12H4z"/>'],
-  ['WordPress','<circle cx="12" cy="12" r="9"/><path d="M6 9l4 9 2-6 2 6 2-9"/>'],
-  ['WooCommerce','<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M7 6V4h10v2"/>'],
-  ['Cloudflare','<path d="M4 17c0-2.8 2.2-5 5-5 .6-2.3 2.7-4 5-4 2.8 0 5.1 2 5.6 4.6A3.5 3.5 0 0119.5 19H5.8"/>'],
-  ['GoDaddy','<path d="M12 2l4 4-4 4-4-4z"/><path d="M8 14h8v6H8z"/>'],
-  ['Hostinger','<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/>']
+  ['Google','google'],
+  ['Google Analytics 4','googleanalytics'],
+  ['Google Search Console','googlesearchconsole'],
+  ['Google Ads','googleads'],
+  ['Meta','meta'],
+  ['TikTok','tiktok'],
+  ['Shopify','shopify'],
+  ['WordPress','wordpress'],
+  ['WooCommerce','woocommerce'],
+  ['Cloudflare','cloudflare'],
+  ['GoDaddy','godaddy'],
+  ['Hostinger','hostinger']
 ];
 const track=document.getElementById('marqueeTrack');
-const chipHTML=techs.map(([name,path])=>`<div class="logo-chip"><span class="lic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">${path}</svg></span><span>${name}</span></div>`).join('');
+const chipHTML=techs.map(([name,slug])=>`<div class="logo-chip"><span class="lic"><img src="https://cdn.simpleicons.org/${slug}" alt="${name} logo" loading="lazy" decoding="async"></span><span>${name}</span></div>`).join('');
 track.innerHTML=chipHTML+chipHTML;
 
 if(window.matchMedia('(hover:hover)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
