@@ -2,98 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Development Services | Markify X</title>
 <meta name="description" content="Markify X development services: web development, Shopify stores, eCommerce, app development, SaaS, custom software, integrations and automation.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#F4620D">
+<link rel="canonical" href="https://www.markifyx.com/development.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Development Services | Markify X">
+<meta property="og:description" content="Markify X development services: web development, Shopify stores, eCommerce, app development, SaaS, custom software, integrations and automation.">
+<meta property="og:image" content="https://www.markifyx.com/assets/logo-light.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<script>try{if(localStorage.getItem('markify-theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-:root{--ink:#111;--paper:#fff;--fog:#f3f3f1;--line:rgba(17,17,17,.12);--orange:#f4620d;--slate:#57534b;--pad:clamp(18px,5vw,64px);--max:1180px;color-scheme:light}
-:root[data-theme="dark"]{--ink:#f2f0ec;--paper:#121110;--fog:#1b1918;--line:rgba(242,240,236,.14);--slate:#b0aca4;color-scheme:dark}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55}
-body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
-.cursor-dot{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--orange);pointer-events:none;z-index:999;transform:translate(-50%,-50%);transition:width .18s,height .18s;mix-blend-mode:difference}
-.cursor-dot.big{width:38px;height:38px;background:#fff}
-@media(hover:none),(prefers-reduced-motion:reduce){.cursor-dot{display:none}body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:auto}}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0}p{color:var(--slate);margin:0}.wrap{max-width:var(--max);margin:auto;padding-inline:var(--pad)}a{color:inherit}
-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:72px}.brand{justify-self:start}.navlinks{justify-self:center}.navcta{justify-self:end}.brand{text-decoration:none;display:flex;align-items:center}.brand img{display:block;width:auto;height:42px}.brand span{color:var(--orange)}.navlinks{display:flex;align-items:center;gap:1.5rem;list-style:none;margin:0;padding:0;font:600 .86rem "Space Grotesk"}.navlinks a{text-decoration:none;opacity:.75}.navlinks a:hover,.navlinks a.active{color:var(--orange);opacity:1}.navcta{display:flex;align-items:center;gap:.7rem}.btn{display:inline-flex;align-items:center;justify-content:center;border:2px solid var(--ink);background:var(--ink);color:var(--paper);padding:.8rem 1.35rem;border-radius:3px;text-decoration:none;font:600 .88rem "Space Grotesk";cursor:pointer}.btn.alt{background:var(--orange);border-color:var(--orange);color:#fff}.theme-toggle{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}.burger{display:none;background:none;border:0}.burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px}
-.hero{padding:clamp(4rem,8vw,7rem) 0 6rem;overflow:hidden;position:relative;clip-path:polygon(0 0,100% 0,100% 94%,0 100%)}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 82% 10%,rgba(244,98,13,.16),transparent 65%);pointer-events:none}.hero .wrap{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:4rem;align-items:center}.eyebrow{color:var(--orange);font:700 .78rem "Space Grotesk";letter-spacing:.12em}.hero h1{font-size:clamp(3rem,6.5vw,5.8rem);max-width:12ch;margin:.8rem 0 1.2rem}.hero h1 em{font-style:normal;color:var(--orange)}.lead{font-size:1.08rem;max-width:680px}.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.8rem}
-.visual{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1rem;box-shadow:0 30px 70px rgba(0,0,0,.13);transform:rotate(1deg)}.window{background:#111;color:#eee;border-radius:10px;padding:1.4rem;font:500 .78rem/1.9 ui-monospace,monospace;min-height:310px}.o{color:#ff8a3d}.m{color:#888}.f{color:#fff}.float{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:.65rem .8rem;box-shadow:0 12px 28px rgba(0,0,0,.12);font:600 .72rem "Space Grotesk"}.float b{color:var(--orange)}.f1{top:-5%;left:-7%}.f2{right:-8%;bottom:8%}
-section{padding:clamp(4rem,7vw,6rem) 0}.alt{background:var(--fog)}.head{max-width:760px;margin-bottom:2.3rem}.head h2{font-size:clamp(2.2rem,4.5vw,4rem);margin:.55rem 0 .8rem}.head p{max-width:700px}
-.selector{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}.option{border:1px solid var(--line);background:var(--paper);padding:1.2rem;border-radius:9px;text-align:left;color:var(--ink);cursor:pointer;transition:.2s}.option:hover,.option.active{border-color:var(--orange);transform:translateY(-3px)}.option.active{box-shadow:0 12px 28px rgba(244,98,13,.1)}.option small{color:var(--orange);font:700 .7rem "Space Grotesk"}.option h3{font-size:1rem;margin:.5rem 0 .35rem}.option p{font-size:.76rem}.result{margin-top:1rem;border:1px solid var(--line);border-radius:10px;padding:1.4rem;background:var(--paper)}.result h3{font-size:1.35rem;margin-bottom:.35rem}.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.8rem}.tags span{border:1px solid var(--line);background:var(--fog);color:var(--orange);padding:.3rem .7rem;border-radius:20px;font:600 .7rem "Space Grotesk"}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}.service{background:var(--paper);padding:2rem;min-height:280px}.service .num{color:var(--orange);font:700 .72rem "Space Grotesk"}.service h3{font-size:1.7rem;margin:.65rem 0 .5rem}.service p{max-width:560px}.service ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.2rem;margin-top:1.2rem}.service li{border-top:1px solid var(--line);padding-top:.5rem;font-size:.78rem;color:var(--slate)}
-.shopify{background:var(--ink);color:var(--paper)}.shopify p{color:#c9c5bd}.shopify-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}.shop-list{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}.shop-item{border:1px solid rgba(242,240,236,.14);border-radius:8px;padding:1rem}.shop-item b{display:block;font:600 .9rem "Space Grotesk";margin-bottom:.2rem}.shop-item span{font-size:.75rem;color:#aaa}.shop-steps{display:grid;gap:.8rem}.shop-step{display:grid;grid-template-columns:38px 1fr;gap:.8rem;border-top:1px solid rgba(242,240,236,.14);padding-top:.8rem}.shop-step strong{width:32px;height:32px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font:700 .7rem "Space Grotesk"}.shop-step h3{font-size:1rem;margin:.1rem 0 .2rem}.shop-step p{font-size:.75rem}
-.process{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line)}.step{background:var(--paper);padding:1.2rem;min-height:175px}.step b{color:var(--orange);font:700 .7rem "Space Grotesk"}.step h3{font-size:1rem;margin:.55rem 0 .35rem}.step p{font-size:.75rem}.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}.cap{background:var(--paper);padding:1.4rem}.cap h3{font-size:1rem;margin-bottom:.3rem}.cap p{font-size:.8rem}
-.impact{background:var(--fog)}.impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}.impact-rows{display:grid;gap:.5rem}.impact-row{display:grid;grid-template-columns:1fr auto 1fr;gap:.6rem;align-items:center}.impact-row span{padding:.6rem .7rem;border-radius:5px;font:600 .78rem "Space Grotesk"}.from{background:var(--paper);color:var(--slate)}.to{background:rgba(244,98,13,.1)}.impact-row i{font-style:normal;color:var(--orange)}
-.cta{background:linear-gradient(135deg,#f4620d,#ff8a3d);color:#fff;clip-path:polygon(0 5%,100% 0,100% 100%,0 100%)}.cta p{color:rgba(255,255,255,.9)}.cta h2{color:#fff;font-size:clamp(2.4rem,5vw,4.5rem);max-width:780px}.form{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;max-width:850px;margin-top:1.7rem}.form input,.form select,.form textarea{width:100%;padding:.85rem 1rem;border:0;border-radius:6px;font:inherit;color:#111;background:#fff}.form textarea{grid-column:1/-1;min-height:120px}.form .btn{justify-self:start}.msg{grid-column:1/-1;color:#fff;font-size:.8rem}
-footer{background:#0a0a0a;color:#b9b4aa;padding:2.6rem 0 1.4rem;font-size:.82rem}footer a{text-decoration:none;color:#b9b4aa}.foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-@media(max-width:900px){.navlinks{display:none}.burger{display:block}.hero .wrap,.shopify-grid,.impact-grid{grid-template-columns:1fr}.hero-visual{max-width:560px;margin:auto}.selector{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr)}.caps{grid-template-columns:1fr 1fr}.float{display:none}}
-@media(max-width:560px){:root{--pad:16px}.nav{min-height:64px}.navcta .btn{display:none}.navlinks.open{display:flex;position:fixed;inset:64px 0 0;background:var(--paper);flex-direction:column;align-items:stretch;padding:1.3rem var(--pad);gap:.2rem;overflow:auto}.navlinks.open a{padding:.7rem 0;border-bottom:1px solid var(--line);opacity:1}.hero{padding:3.5rem 0 4.5rem}.hero h1{font-size:clamp(2.6rem,12vw,3.8rem);max-width:100%}.actions,.actions .btn{width:100%}.actions .btn{justify-content:center}.selector,.process,.caps,.shop-list{grid-template-columns:1fr}.service{padding:1.5rem}.service ul{grid-template-columns:1fr}.impact-row{grid-template-columns:1fr;text-align:center}.impact-row i{transform:rotate(90deg)}.form{grid-template-columns:1fr}.form textarea{grid-column:auto}.cta{clip-path:polygon(0 2%,100% 0,100% 100%,0 100%)}}
+/* ===== development page only ===== */
+.code{background:#111;color:#eee;border-radius:8px;padding:1.2rem 1.3rem;font:500 .8rem/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;overflow-x:auto;white-space:nowrap}
+.code .o{color:#ff8a3d}.code .m{color:#888}.code .f{color:#fff}
+
+.selector{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+.option{border:1px solid var(--line);background:var(--paper);padding:1.2rem;border-radius:9px;text-align:left;color:var(--ink);cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s;font:inherit}
+.option:hover,.option.active{border-color:var(--orange);transform:translateY(-3px)}
+.option.active{box-shadow:0 12px 28px rgba(244,98,13,.1)}
+.option small{color:var(--orange);font:700 .72rem 'Space Grotesk',sans-serif}
+.option h3{font-size:1rem;margin:.5rem 0 .35rem}
+.option p{font-size:.78rem}
+.result{margin-top:1rem;border:1px solid var(--line);border-radius:10px;padding:1.4rem;background:var(--paper)}
+.result h3{font-size:1.35rem;margin-bottom:.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.9rem}
+.tags span{border:1px solid var(--line);background:var(--fog);color:var(--orange);padding:.3rem .75rem;border-radius:20px;font:600 .74rem 'Space Grotesk',sans-serif}
+
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.service{background:var(--paper);padding:2rem;min-height:280px}
+.service .num{color:var(--orange);font:700 .78rem 'Space Grotesk',sans-serif}
+.service h3{font-size:1.55rem;margin:.65rem 0 .5rem}
+.service p{max-width:560px}
+.service ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.2rem;margin-top:1.2rem}
+.service li{border-top:1px solid var(--line);padding-top:.5rem;font-size:.82rem;color:var(--slate)}
+
+.shopify{background:#111;color:#F2F0EC}
+:root[data-theme="dark"] .shopify{background:#1B1918;border-block:1px solid var(--line)}
+.shopify h2{color:#fff}
+.shopify p{color:#C9C5BD}
+.shopify-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.shop-list{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;align-content:start}
+.shop-item{border:1px solid rgba(242,240,236,.16);border-radius:8px;padding:1rem}
+.shop-item b{display:block;font:600 .92rem 'Space Grotesk',sans-serif;margin-bottom:.2rem;color:#fff}
+.shop-item span{font-size:.78rem;color:#B5B0A8}
+.shop-steps{display:grid;gap:.8rem;align-content:start}
+.shop-step{display:grid;grid-template-columns:38px 1fr;gap:.8rem;border-top:1px solid rgba(242,240,236,.16);padding-top:.8rem}
+.shop-step strong{width:32px;height:32px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font:700 .72rem 'Space Grotesk',sans-serif}
+.shop-step h3{font-size:1rem;margin:.1rem 0 .2rem;color:#fff}
+.shop-step p{font-size:.8rem}
+
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cap{background:var(--paper);padding:1.4rem}
+.cap h3{font-size:1rem;margin-bottom:.3rem}
+.cap p{font-size:.86rem}
+
+.process{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:var(--paper);padding:1.2rem;min-height:175px}
+.step b{color:var(--orange);font:700 .72rem 'Space Grotesk',sans-serif}
+.step h3{font-size:1rem;margin:.55rem 0 .35rem}
+.step p{font-size:.8rem}
+
+.impact{background:var(--fog)}
+.impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.impact-grid .section-head{margin-bottom:0}
+.impact-rows{display:grid;gap:.5rem}
+.impact-row{display:grid;grid-template-columns:1fr auto 1fr;gap:.6rem;align-items:center}
+.impact-row span{padding:.6rem .8rem;border-radius:5px;font:600 .82rem 'Space Grotesk',sans-serif}
+.from{background:var(--paper);color:var(--slate)}
+.to{background:rgba(244,98,13,.1);color:var(--ink)}
+.impact-row i{font-style:normal;color:var(--orange)}
+
+@media(max-width:1100px){.process{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:900px){
+  .shopify-grid,.impact-grid{grid-template-columns:1fr;gap:2rem}
+  .selector{grid-template-columns:repeat(2,1fr)}
+  .services{grid-template-columns:1fr}
+  .process{grid-template-columns:repeat(2,1fr)}
+  .caps{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .selector,.process,.caps,.shop-list{grid-template-columns:1fr}
+  .option{padding:1rem}
+  .service{padding:1.4rem;min-height:0}
+  .service ul{grid-template-columns:1fr}
+  .step{min-height:0}
+  .impact-row{grid-template-columns:1fr;text-align:center}
+  .impact-row i{transform:rotate(90deg)}
+}
+
 </style>
 </head>
-<body>
-<header>
-  <nav class="nav wrap">
-    <a class="brand" href="/" aria-label="Markify X home"><img id="navLogo" src="assets/logo-main.png" data-light="assets/logo-main.png" data-dark="assets/logo-white.png" alt="Markify X logo"></a>
+<body data-page="development">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav wrap" aria-label="Primary">
+    <a class="brand" href="index.html" aria-label="Markify X — home">
+      <img class="logo-l" src="assets/logo-light.png" width="120" height="33" alt="Markify X">
+      <img class="logo-d" src="assets/logo-dark.png" width="120" height="33" alt="" aria-hidden="true">
+    </a>
     <ul class="navlinks" id="navlinks">
-      <li class="has-dropdown">
-        <a class="nav-top" href="marketing.html" aria-label="Open Marketing services page">Marketing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-        <div class="dropdown cols2">
-          <a href="#svc-marketing">Digital Marketing</a>
-          <a href="#svc-growth">SEO &amp; AI Search</a>
-          <a href="#svc-commerce">eCommerce</a>
-          <a href="#svc-marketing">Social Media</a>
-          <a href="#svc-creative">Branding &amp; Design</a>
-          <a href="#svc-creative">Video Editing</a>
-          <a href="#svc-marketing">Email Marketing</a>
-          <a href="#svc-automation">Business Automation</a>
-        </div>
-      </li>
-      <li class="has-dropdown">
-        <a class="nav-top" href="development.html" aria-label="Open Development services page">Development <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-        <div class="dropdown">
-          <a href="#svc-technology">Web Development</a>
-          <a href="#svc-technology">App Development</a>
-          <a href="#svc-technology">SaaS &amp; Software</a>
-          <a href="#svc-commerce">eCommerce &amp; Shopify Stores</a>
-          <a href="#svc-automation">Business Automation</a>
-        </div>
-      </li>
-      <li class="has-dropdown">
-        <button class="nav-top" type="button">Case Studies <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="dropdown">
-          <a href="#about">About</a>
-          <a href="#case">Portfolio</a>
-        </div>
-      </li>
-      <li class="has-dropdown">
-        <button class="nav-top" type="button">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="dropdown">
-          <a href="#blog">Blogs</a>
-          <a href="#needs">Analysis Tools</a>
-        </div>
-      </li>
+      <li data-nav="home"><a href="index.html">Home</a></li>
+      <li class="has-dropdown" data-nav="marketing"><div class="nav-row"><a class="nav-top" href="marketing.html">Marketing</a><button class="nav-caret" type="button" aria-label="Marketing submenu" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div><div class="dropdown cols2"><a class="dd-all" href="marketing.html">All Marketing Services</a><a href="marketing.html#digital-marketing">Digital Marketing</a><a href="marketing.html#seo">SEO &amp; AI Search</a><a href="marketing.html#ecommerce">eCommerce Marketing</a><a href="marketing.html#social">Social Media</a><a href="marketing.html#branding">Branding &amp; Design</a><a href="marketing.html#video">Video Editing</a><a href="marketing.html#email">Email Marketing</a><a href="marketing.html#automation">Marketing Automation</a></div></li>
+      <li class="has-dropdown" data-nav="development"><div class="nav-row"><a class="nav-top" href="development.html">Development</a><button class="nav-caret" type="button" aria-label="Development submenu" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div><div class="dropdown"><a class="dd-all" href="development.html">All Development Services</a><a href="development.html#web">Web Development</a><a href="development.html#app">App Development</a><a href="development.html#saas">SaaS Development</a><a href="development.html#custom">Custom Software</a><a href="development.html#shopify">eCommerce &amp; Shopify Stores</a><a href="development.html#integrations">APIs, Integrations &amp; Automation</a></div></li>
+      <li class="has-dropdown" data-nav="case" data-spy="about case difference"><div class="nav-row"><a class="nav-top" href="index.html#case">Case Studies</a><button class="nav-caret" type="button" aria-label="Case Studies submenu" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div><div class="dropdown"><a href="index.html#about">About Us</a><a href="index.html#case">Case Study</a><a href="index.html#difference">Our Approach</a></div></li>
+      <li class="has-dropdown align-right" data-nav="resources" data-spy="needs faq blog"><div class="nav-row"><a class="nav-top" href="index.html#blog">Resources</a><button class="nav-caret" type="button" aria-label="Resources submenu" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div><div class="dropdown"><a href="index.html#blog">Blog</a><a href="index.html#needs">Analysis Tools</a><a href="index.html#faq">FAQ</a></div></li>
       <li class="mobile-cta"><a class="btn alt" href="#contact">Get a Free Consultation Call</a></li>
     </ul>
     <div class="navcta">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark theme">
-        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.3A9 9 0 1111.7 3 7 7 0 0021 12.3z"/></svg>
-        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark theme">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.3A9 9 0 1111.7 3 7 7 0 0021 12.3z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
       </button>
       <a class="btn alt" href="#contact">Get a Free Consultation Call</a>
-      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
     </div>
   </nav>
 </header>
 
-<main>
-<section class="hero"><div class="wrap">
-<div><p class="eyebrow">DEVELOPMENT · BUILD · SCALE</p><h1>We Build <em>Digital Products</em> That Work.</h1><p class="lead">From high-performance websites and <strong>Shopify stores</strong> to mobile apps, SaaS platforms and custom business software, Markify X turns business requirements into practical digital products.</p><div class="actions"><a class="btn alt" href="#contact">Start a Project</a><a class="btn" href="#services">Explore Development</a></div></div>
-<div class="hero-visual"><div class="visual"><div class="window"><span class="m">// build around the business</span><br><span class="o">const</span> product = {<br>&nbsp;&nbsp;<span class="f">strategy</span>: <span class="o">'clear'</span>,<br>&nbsp;&nbsp;<span class="f">experience</span>: <span class="o">'simple'</span>,<br>&nbsp;&nbsp;<span class="f">technology</span>: <span class="o">'scalable'</span>,<br>&nbsp;&nbsp;<span class="f">analytics</span>: <span class="o">true</span>,<br>&nbsp;&nbsp;<span class="f">growth</span>: <span class="o">'built-in'</span><br>};<br><br><span class="m">// ready for launch</span></div></div><div class="float f1"><b>01</b> Strategy → Build</div><div class="float f2"><b>02</b> Launch → Improve</div></div>
-</div></section>
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">DEVELOPMENT · BUILD · SCALE</p>
+      <h1 class="kinetic-h1"><span class="kline">We build digital</span><span class="kline"><em>products that work.</em></span></h1>
+      <p class="hero-lead">From high-performance websites and <strong>Shopify stores</strong> to mobile apps, SaaS platforms and custom business software, Markify X turns business requirements into practical digital products.</p>
+      <div class="hero-ctas">
+        <a class="btn alt" href="#contact">Start a Project</a>
+        <a class="btn ghost" href="#services">Explore Development</a>
+      </div>
+    </div>
+    <div class="hero-visual" id="tiltPanel">
+      <div class="panel">
+        <div class="panel-head"><b>Product blueprint</b><span>▲ ready for launch</span></div>
+        <div class="code" aria-hidden="true"><span class="m">// build around the business</span><br><span class="o">const</span> product = {<br>&nbsp;&nbsp;<span class="f">strategy</span>: <span class="o">'clear'</span>,<br>&nbsp;&nbsp;<span class="f">experience</span>: <span class="o">'simple'</span>,<br>&nbsp;&nbsp;<span class="f">technology</span>: <span class="o">'scalable'</span>,<br>&nbsp;&nbsp;<span class="f">analytics</span>: <span class="o">true</span>,<br>&nbsp;&nbsp;<span class="f">growth</span>: <span class="o">'built-in'</span><br>};</div>
+        <div class="chips">
+          <div class="chip c1"><b>01</b> <span>Strategy → Build</span></div>
+          <div class="chip c2"><b>02</b> <span>Launch → Improve</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="alt" id="build"><div class="wrap"><div class="head"><p class="eyebrow">WHAT ARE YOU BUILDING?</p><h2>Start with the product. Not the technology.</h2><p>Choose the closest fit and we'll shape the development around what the business actually needs.</p></div>
+<section class="tint" id="build"><div class="wrap"><div class="section-head reveal"><p class="eyebrow">WHAT ARE YOU BUILDING?</p><h2>Start with the product. Not the technology.</h2><p>Choose the closest fit and we'll shape the development around what the business actually needs.</p></div>
 <div class="selector" id="selector">
 <button class="option active" data-title="A business website" data-copy="A professional website built around your customers, content, conversion goals and search visibility." data-tags="Web Development,UI/UX,Performance,SEO Foundations"><small>01</small><h3>Business Website</h3><p>Services, corporate, landing pages and content-led websites.</p></button>
 <button class="option" data-title="A Shopify store" data-copy="A launch-ready Shopify store with a clear structure, strong product experience, analytics and conversion-focused UX." data-tags="Shopify,Store Design,Products,Payments,SEO,Analytics"><small>02</small><h3>Shopify Store</h3><p>Launch, redesign or improve an online store.</p></button>
@@ -106,57 +165,100 @@ footer{background:#0a0a0a;color:#b9b4aa;padding:2.6rem 0 1.4rem;font-size:.82rem
 </div><div class="result" id="result"><h3>A business website</h3><p>A professional website built around your customers, content, conversion goals and search visibility.</p><div class="tags"><span>Web Development</span><span>UI/UX</span><span>Performance</span><span>SEO Foundations</span></div></div>
 </div></section>
 
-<section id="services"><div class="wrap"><div class="head"><p class="eyebrow">DEVELOPMENT SERVICES</p><h2>One development team. Multiple ways to build.</h2><p>Each service has a different job. We keep them clear, then connect them when your project needs more than one.</p></div>
+<section id="services"><div class="wrap"><div class="section-head reveal"><p class="eyebrow">DEVELOPMENT SERVICES</p><h2>One development team. Multiple ways to build.</h2><p>Each service has a different job. We keep them clear, then connect them when your project needs more than one.</p></div>
 <div class="services">
-<article class="service"><span class="num">01</span><h3>Web Development</h3><p>Modern websites and web experiences built around your business, users and growth goals.</p><ul><li>Business websites</li><li>Corporate websites</li><li>Landing pages</li><li>Web applications</li><li>CMS development</li><li>Performance</li><li>SEO-ready architecture</li><li>Custom functionality</li></ul></article>
-<article class="service"><span class="num">02</span><h3>App Development</h3><p>Mobile applications that connect the customer experience with the systems behind your business.</p><ul><li>Customer apps</li><li>Business apps</li><li>Authentication</li><li>Dashboards</li><li>Notifications</li><li>APIs</li><li>Backend systems</li><li>Third-party integrations</li></ul></article>
-<article class="service"><span class="num">03</span><h3>SaaS Development</h3><p>Build a software product from concept to a usable platform with the foundations to grow.</p><ul><li>User accounts</li><li>Subscriptions</li><li>Payments</li><li>Dashboards</li><li>Admin panels</li><li>Teams & workspaces</li><li>APIs</li><li>Scalable architecture</li></ul></article>
-<article class="service"><span class="num">04</span><h3>Custom Software</h3><p>When your operation doesn't fit generic software, build the system around the way your business works.</p><ul><li>CRM systems</li><li>ERP systems</li><li>Business dashboards</li><li>Customer portals</li><li>Management platforms</li><li>Inventory systems</li><li>Internal tools</li><li>Workflow systems</li></ul></article>
-<article class="service"><span class="num">05</span><h3>eCommerce Development</h3><p>Commerce experiences that connect products, customers, payments, analytics and operations.</p><ul><li>Shopify</li><li>WooCommerce</li><li>Custom eCommerce</li><li>Product systems</li><li>Checkout</li><li>Payments</li><li>Customer accounts</li><li>Analytics</li></ul></article>
-<article class="service"><span class="num">06</span><h3>APIs, Integrations & Automation</h3><p>Connect the systems your business already uses and remove repetitive manual work.</p><ul><li>REST APIs</li><li>Payment gateways</li><li>CRM integrations</li><li>Email systems</li><li>Analytics</li><li>AI integrations</li><li>Automated workflows</li><li>Data connections</li></ul></article>
+<article class="service" id="web"><span class="num">01</span><h3>Web Development</h3><p>Modern websites and web experiences built around your business, users and growth goals.</p><ul><li>Business websites</li><li>Corporate websites</li><li>Landing pages</li><li>Web applications</li><li>CMS development</li><li>Performance</li><li>SEO-ready architecture</li><li>Custom functionality</li></ul></article>
+<article class="service" id="app"><span class="num">02</span><h3>App Development</h3><p>Mobile applications that connect the customer experience with the systems behind your business.</p><ul><li>Customer apps</li><li>Business apps</li><li>Authentication</li><li>Dashboards</li><li>Notifications</li><li>APIs</li><li>Backend systems</li><li>Third-party integrations</li></ul></article>
+<article class="service" id="saas"><span class="num">03</span><h3>SaaS Development</h3><p>Build a software product from concept to a usable platform with the foundations to grow.</p><ul><li>User accounts</li><li>Subscriptions</li><li>Payments</li><li>Dashboards</li><li>Admin panels</li><li>Teams & workspaces</li><li>APIs</li><li>Scalable architecture</li></ul></article>
+<article class="service" id="custom"><span class="num">04</span><h3>Custom Software</h3><p>When your operation doesn't fit generic software, build the system around the way your business works.</p><ul><li>CRM systems</li><li>ERP systems</li><li>Business dashboards</li><li>Customer portals</li><li>Management platforms</li><li>Inventory systems</li><li>Internal tools</li><li>Workflow systems</li></ul></article>
+<article class="service" id="ecommerce"><span class="num">05</span><h3>eCommerce Development</h3><p>Commerce experiences that connect products, customers, payments, analytics and operations.</p><ul><li>Shopify</li><li>WooCommerce</li><li>Custom eCommerce</li><li>Product systems</li><li>Checkout</li><li>Payments</li><li>Customer accounts</li><li>Analytics</li></ul></article>
+<article class="service" id="integrations"><span class="num">06</span><h3>APIs, Integrations & Automation</h3><p>Connect the systems your business already uses and remove repetitive manual work.</p><ul><li>REST APIs</li><li>Payment gateways</li><li>CRM integrations</li><li>Email systems</li><li>Analytics</li><li>AI integrations</li><li>Automated workflows</li><li>Data connections</li></ul></article>
 </div></div></section>
 
-<section class="shopify" id="shopify"><div class="wrap"><div class="head"><p class="eyebrow">SHOPIFY STORE DEVELOPMENT</p><h2>Launch a Shopify Store Built for Real Customers.</h2><p>Your Shopify store should do more than display products. We build the structure, experience and connections needed to make the store useful for customers and manageable for your business.</p></div>
+<section class="shopify" id="shopify"><div class="wrap"><div class="section-head reveal"><p class="eyebrow">SHOPIFY STORE DEVELOPMENT</p><h2>Launch a Shopify Store Built for Real Customers.</h2><p>Your Shopify store should do more than display products. We build the structure, experience and connections needed to make the store useful for customers and manageable for your business.</p></div>
 <div class="shopify-grid"><div class="shop-list">
 <div class="shop-item"><b>Store Setup</b><span>Configuration, structure and launch preparation.</span></div><div class="shop-item"><b>Custom Design</b><span>Brand-led storefronts instead of generic layouts.</span></div><div class="shop-item"><b>Shopify 2.0</b><span>Flexible sections and modern theme architecture.</span></div><div class="shop-item"><b>Products & Collections</b><span>Clear catalog structure and navigation.</span></div><div class="shop-item"><b>Checkout & Payments</b><span>Connect the purchasing experience and required payment systems.</span></div><div class="shop-item"><b>App Integrations</b><span>Connect the tools your store depends on.</span></div><div class="shop-item"><b>SEO Foundations</b><span>Technical structure prepared for organic discovery.</span></div><div class="shop-item"><b>Analytics & Tracking</b><span>Measure visits, products, actions and conversions.</span></div>
 </div><div class="shop-steps"><div class="shop-step"><strong>01</strong><div><h3>Understand the Store</h3><p>Products, customers, markets, operations and commercial goals.</p></div></div><div class="shop-step"><strong>02</strong><div><h3>Plan the Experience</h3><p>Information architecture, collections, navigation and customer journey.</p></div></div><div class="shop-step"><strong>03</strong><div><h3>Design & Develop</h3><p>Build the storefront, functionality and required integrations.</p></div></div><div class="shop-step"><strong>04</strong><div><h3>Test & Launch</h3><p>Check mobile experience, purchasing flows, tracking and performance before launch.</p></div></div></div></div>
 </div></section>
 
-<section class="alt"><div class="wrap"><div class="head"><p class="eyebrow">MORE THAN CODE</p><h2>Development starts with the business requirement.</h2><p>Technology is the implementation. The starting point is understanding what the product needs to accomplish.</p></div><div class="caps"><div class="cap"><h3>Performance</h3><p>Fast, responsive experiences designed for real devices and users.</p></div><div class="cap"><h3>Scalability</h3><p>Architecture that can evolve as traffic, users and requirements increase.</p></div><div class="cap"><h3>Security</h3><p>Authentication, permissions and secure handling of business data.</p></div><div class="cap"><h3>SEO</h3><p>Technical foundations that support search discovery.</p></div><div class="cap"><h3>Analytics</h3><p>Track meaningful user actions and product performance.</p></div><div class="cap"><h3>Integration</h3><p>Connect websites, stores, apps and business systems.</p></div></div></div></section>
+<section class="tint"><div class="wrap"><div class="section-head reveal"><p class="eyebrow">MORE THAN CODE</p><h2>Development starts with the business requirement.</h2><p>Technology is the implementation. The starting point is understanding what the product needs to accomplish.</p></div><div class="caps"><div class="cap"><h3>Performance</h3><p>Fast, responsive experiences designed for real devices and users.</p></div><div class="cap"><h3>Scalability</h3><p>Architecture that can evolve as traffic, users and requirements increase.</p></div><div class="cap"><h3>Security</h3><p>Authentication, permissions and secure handling of business data.</p></div><div class="cap"><h3>SEO</h3><p>Technical foundations that support search discovery.</p></div><div class="cap"><h3>Analytics</h3><p>Track meaningful user actions and product performance.</p></div><div class="cap"><h3>Integration</h3><p>Connect websites, stores, apps and business systems.</p></div></div></div></section>
 
-<section id="process"><div class="wrap"><div class="head"><p class="eyebrow">HOW WE BUILD</p><h2>From idea to working product.</h2><p>A clear process keeps the project aligned before, during and after development.</p></div><div class="process"><div class="step"><b>01</b><h3>Discover</h3><p>Understand the business, users, requirements and objectives.</p></div><div class="step"><b>02</b><h3>Plan</h3><p>Define features, architecture, integrations and scope.</p></div><div class="step"><b>03</b><h3>Design</h3><p>Shape the interface and user experience.</p></div><div class="step"><b>04</b><h3>Develop</h3><p>Build the product and connect the required systems.</p></div><div class="step"><b>05</b><h3>Test</h3><p>Check functionality, responsiveness, performance and security.</p></div><div class="step"><b>06</b><h3>Launch</h3><p>Deploy the product and prepare it for real users.</p></div><div class="step"><b>07</b><h3>Improve</h3><p>Use analytics and feedback to keep improving.</p></div></div></div></section>
+<section id="process"><div class="wrap"><div class="section-head reveal"><p class="eyebrow">HOW WE BUILD</p><h2>From idea to working product.</h2><p>A clear process keeps the project aligned before, during and after development.</p></div><div class="process"><div class="step"><b>01</b><h3>Discover</h3><p>Understand the business, users, requirements and objectives.</p></div><div class="step"><b>02</b><h3>Plan</h3><p>Define features, architecture, integrations and scope.</p></div><div class="step"><b>03</b><h3>Design</h3><p>Shape the interface and user experience.</p></div><div class="step"><b>04</b><h3>Develop</h3><p>Build the product and connect the required systems.</p></div><div class="step"><b>05</b><h3>Test</h3><p>Check functionality, responsiveness, performance and security.</p></div><div class="step"><b>06</b><h3>Launch</h3><p>Deploy the product and prepare it for real users.</p></div><div class="step"><b>07</b><h3>Improve</h3><p>Use analytics and feedback to keep improving.</p></div></div></div></section>
 
-<section class="impact"><div class="wrap impact-grid"><div class="head"><p class="eyebrow">DEVELOPMENT IMPACT</p><h2>Build systems that change how the business operates.</h2><p>The objective isn't code for its own sake. It's a better digital experience, cleaner workflows or a product that can support the next stage of the business.</p></div><div class="impact-rows"><div class="impact-row"><span class="from">Manual processes</span><i>→</i><span class="to">Connected workflows</span></div><div class="impact-row"><span class="from">Scattered data</span><i>→</i><span class="to">Centralized systems</span></div><div class="impact-row"><span class="from">Slow experience</span><i>→</i><span class="to">Faster digital product</span></div><div class="impact-row"><span class="from">Generic software</span><i>→</i><span class="to">Business-specific tools</span></div><div class="impact-row"><span class="from">Product idea</span><i>→</i><span class="to">Working digital product</span></div></div></div></section>
+<section class="impact"><div class="wrap impact-grid"><div class="section-head reveal"><p class="eyebrow">DEVELOPMENT IMPACT</p><h2>Build systems that change how the business operates.</h2><p>The objective isn't code for its own sake. It's a better digital experience, cleaner workflows or a product that can support the next stage of the business.</p></div><div class="impact-rows"><div class="impact-row"><span class="from">Manual processes</span><i>→</i><span class="to">Connected workflows</span></div><div class="impact-row"><span class="from">Scattered data</span><i>→</i><span class="to">Centralized systems</span></div><div class="impact-row"><span class="from">Slow experience</span><i>→</i><span class="to">Faster digital product</span></div><div class="impact-row"><span class="from">Generic software</span><i>→</i><span class="to">Business-specific tools</span></div><div class="impact-row"><span class="from">Product idea</span><i>→</i><span class="to">Working digital product</span></div></div></div></section>
 
-<section id="contact" class="cta"><div class="wrap"><p class="eyebrow">OPEN CONSULTATION</p><h2>Have something you want to build?</h2><p>Tell us what you're trying to create, what problem you're solving, or what isn't working with your current system. You don't need a perfect technical brief.</p><form class="form" id="devForm"><input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Email address" required><select name="project" required><option value="">What are you building?</option><option>Business Website</option><option>Shopify Store</option><option>eCommerce Platform</option><option>Mobile App</option><option>SaaS / Web App</option><option>Custom Software</option><option>Integration / Automation</option><option>Existing Product Improvement</option></select><input name="budget" placeholder="Approximate budget"><textarea name="message" placeholder="Tell us about the project..." required></textarea><button class="btn" type="submit">Book a Consultation →</button><p class="msg" id="msg"></p></form></div></section>
+<section id="contact" class="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">OPEN CONSULTATION</p>
+        <h2>Have something you want to build?</h2>
+        <p style="margin-top:.8rem">Tell us what you're trying to create, what problem you're solving, or what isn't working with your current system. You don't need a perfect technical brief.</p>
+        <ul class="hint"><li>✓ No technical brief required — start with the idea.</li><li>✓ We recommend the simplest build that solves the problem.</li><li>✓ You only invest in what makes sense for your stage.</li></ul>
+      </div>
+      <form data-contact-form novalidate>
+        <div class="row2">
+          <div><label class="fl" for="f-name">Name</label><input id="f-name" type="text" name="name" placeholder="Your name" autocomplete="name" required></div>
+          <div><label class="fl" for="f-email">Email</label><input id="f-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required></div>
+        </div>
+        <div class="row2">
+          <div><label class="fl" for="f-proj">What are you building?</label><select id="f-proj" name="project"><option value="">Select one…</option><option>Business Website</option><option>Shopify Store</option><option>eCommerce Platform</option><option>Mobile App</option><option>SaaS / Web App</option><option>Custom Software</option><option>Integration / Automation</option><option>Existing Product Improvement</option></select></div>
+          <div><label class="fl" for="f-budget">Approximate budget</label><input id="f-budget" type="text" name="budget" placeholder="Optional"></div>
+        </div>
+        <div><label class="fl" for="f-msg">Tell us about the project</label><textarea id="f-msg" name="message" rows="3" placeholder="What do you want to build, and what should it achieve?"></textarea></div>
+        <button class="btn alt" type="submit">Book a Consultation →</button>
+        <p class="form-msg" role="status" aria-live="polite">Not sure where to start? Just tell us what you want to build.</p>
+      </form>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 Markify X. All rights reserved.</span><span><a href="index.html">Home</a> · <a href="marketing.html">Marketing</a> · <a href="development.html">Development</a></span></div></footer>
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <a href="index.html" aria-label="Markify X — home"><img src="assets/logo-dark.png" width="100" height="28" alt="Markify X"></a>
+      <p>Technology, marketing, creative and automation — connected around your business goals.</p>
+    </div>
+    <div><h4>Explore</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About us</a></li>
+      <li><a href="marketing.html">Marketing</a></li>
+      <li><a href="development.html">Development</a></li>
+      <li><a href="index.html#case">Case study</a></li>
+      <li><a href="#contact">Consultation</a></li>
+    </ul></div>
+    <div><h4>Services</h4><ul>
+      <li><a href="marketing.html#digital-marketing">Digital Marketing</a></li>
+      <li><a href="marketing.html#seo">SEO &amp; AI Search</a></li>
+      <li><a href="development.html#web">Web Development</a></li>
+      <li><a href="development.html#app">App Development</a></li>
+      <li><a href="development.html#shopify">Shopify Stores</a></li>
+      <li><a href="marketing.html#automation">Automation</a></li>
+    </ul></div>
+    <div><h4>Contact</h4><ul>
+      <li>1, My Address, My Street, New York City, NY, USA</li>
+      <li><a href="tel:+1234567890">+1 234 567 890</a></li>
+      <li><a href="mailto:contact@domain.com">contact@domain.com</a></li>
+    </ul></div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Markify X. All rights reserved.</span>
+    <div class="socials" aria-label="Social media links"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X / Twitter">x</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Pinterest">p</a></div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
 <script>
 (function(){
-const root=document.documentElement,t=document.getElementById('themeToggle'),logo=document.getElementById('navLogo'),saved=localStorage.getItem('markify-theme');
-function syncLogo(){if(logo)logo.src=root.getAttribute('data-theme')==='dark'?logo.dataset.dark:logo.dataset.light;}
-if(saved)root.setAttribute('data-theme',saved);syncLogo();
-if(window.matchMedia('(hover:hover)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
-document.body.classList.add('has-cursor');
-const dot=document.createElement('div'); dot.className='cursor-dot'; document.body.appendChild(dot);
-window.addEventListener('pointermove',e=>{dot.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-50%)`;});
-document.querySelectorAll('a,button,.card,summary').forEach(el=>{
-el.addEventListener('pointerenter',()=>dot.classList.add('big'));
-el.addEventListener('pointerleave',()=>dot.classList.remove('big'));
-});
-document.querySelectorAll('.btn').forEach(btn=>{
-btn.addEventListener('pointermove',e=>{
-const r=btn.getBoundingClientRect();
-btn.style.transform=`translate(${((e.clientX-r.left-r.width/2)*.3).toFixed(1)}px,${((e.clientY-r.top-r.height/2)*.3).toFixed(1)}px`;
-});
-btn.addEventListener('pointerleave',()=>{btn.style.transform='';});
-});
-}
-
-t&&t.addEventListener('click',()=>{const n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);syncLogo();localStorage.setItem('markify-theme',n)});
-const b=document.getElementById('burger'),n=document.getElementById('navlinks');b&&b.addEventListener('click',()=>n.classList.toggle('open'));
-document.querySelectorAll('.option').forEach(x=>x.addEventListener('click',()=>{document.querySelectorAll('.option').forEach(y=>y.classList.remove('active'));x.classList.add('active');const tags=x.dataset.tags.split(',');document.getElementById('result').innerHTML='<h3>'+x.dataset.title+'</h3><p>'+x.dataset.copy+'</p><div class="tags">'+tags.map(z=>'<span>'+z+'</span>').join('')+'</div>'}));
-document.getElementById('devForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('msg').textContent='Thanks — your project details have been captured. Connect this form to your preferred email endpoint before launch.'});
+  var result=document.getElementById('result');
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  document.querySelectorAll('.option').forEach(function(x){
+    x.addEventListener('click',function(){
+      document.querySelectorAll('.option').forEach(function(y){y.classList.remove('active')});
+      x.classList.add('active');
+      var tags=x.dataset.tags.split(',');
+      result.innerHTML='<h3>'+esc(x.dataset.title)+'</h3><p>'+esc(x.dataset.copy)+'</p><div class="tags">'+tags.map(function(z){return '<span>'+esc(z)+'</span>'}).join('')+'</div>';
+    });
+  });
 })();
 </script>
 </body>
